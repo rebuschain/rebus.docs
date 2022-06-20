@@ -1,5 +1,7 @@
 ---
 description: How to stake your Rebus with the Omniflix UI and Keplr browser extension
+icon: browser
+tags: [knowledge]
 ---
 
 # Rebus Staking UI

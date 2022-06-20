@@ -1,5 +1,6 @@
 ---
 description: Shortcut to sync a node to the mainnet from a snapshot
+visibility: hidden
 ---
 
 # Sync from Snapshot

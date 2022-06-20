@@ -1,5 +1,6 @@
 ---
 description: General instructions to join the Rebus mainnet after network genesis.
+order: 996
 ---
 
 # Joining Mainnet

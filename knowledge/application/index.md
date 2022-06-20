@@ -1,5 +1,7 @@
 ---
 description: Interacting with the Rebus Application
+icon: note
+tags: [knowledge]
 ---
 
 # Rebus UI Application

@@ -1,5 +1,6 @@
 ---
 description: General instructions on how to join the Rebus testnets
+order: 997
 ---
 
 # Joining Testnets

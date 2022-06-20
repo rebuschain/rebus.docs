@@ -1,3 +1,7 @@
+---
+visibility: hidden
+---
+
 # Official Delegations Handbook
 
 A Rebus network validator may qualify for official delegations to be assigned by the core development reserve.&#x20;

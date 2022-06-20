@@ -1,5 +1,7 @@
 ---
 description: Securing the Rebus Chain by staking REBUS🔒 🔑
+icon: stack
+tags: [knowledge]
 ---
 
 # Staking

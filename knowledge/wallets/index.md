@@ -1,5 +1,7 @@
 ---
 description: How to install and configure crypto wallets that are compatible with Rebus
+icon: mail
+tags: [knowledge]
 ---
 
 # Wallets

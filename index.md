@@ -1,5 +1,6 @@
 ---
 description: Rebus - Taking DeFi Mainstream
+icon: home
 ---
 
 # Introduction

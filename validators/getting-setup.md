@@ -1,5 +1,6 @@
 ---
 description: Instruction to install the rebusd binary
+order: 1000
 ---
 
 # Rebusd Installation and setup

@@ -1,5 +1,6 @@
 ---
 description: It's 🚀 time!
+order: 998
 ---
 
 # Mainnet Setup and Tooling
