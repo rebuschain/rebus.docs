@@ -1,0 +1,19 @@
+input: .
+output: .retype
+url: https://rebuschain.com
+branding:
+  logo: public/assets/rebus-logo.png
+  logoDark: public/assets/rebus-logo-dark.png
+links:
+- text: Website
+  link: https://rebuschain.com
+- text: Discort
+  link: https://discord.com/invite/rebuschain
+- text: Github
+  link: https://github.com/rebuschain
+- text: Medium
+  link: https://medium.com/@RebusChain
+footer:
+  copyright: "&copy; Copyright {{ year }} Rebus Chain. All rights reserved."
+exclude:
+- README.md
