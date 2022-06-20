@@ -9,29 +9,32 @@
     <meta name="generator" content="Retype 2.3.0">
 
     <!-- Primary Meta Tags -->
-    <title>Initialise the Contract</title>
-    <meta name="title" content="Initialise the Contract">
+    <title>Staking</title>
+    <meta name="title" content="Staking">
+    <meta name="description" content="Securing the Rebus Chain by staking REBUS🔒 🔑" />
 
     <!-- Canonical -->
-    <link rel="canonical" href="https://rebuschain.com/development/cw1-tutorial/initialise-the-contract/" />
+    <link rel="canonical" href="https://rebuschain.com/knowledge/staking/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rebuschain.com/development/cw1-tutorial/initialise-the-contract/">
-    <meta property="og:title" content="Initialise the Contract">
+    <meta property="og:url" content="https://rebuschain.com/knowledge/staking/">
+    <meta property="og:title" content="Staking">
+    <meta property="og:description" content="Securing the Rebus Chain by staking REBUS🔒 🔑">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://rebuschain.com/development/cw1-tutorial/initialise-the-contract/">
-    <meta property="twitter:title" content="Initialise the Contract">
+    <meta property="twitter:url" content="https://rebuschain.com/knowledge/staking/">
+    <meta property="twitter:title" content="Staking">
+    <meta property="twitter:description" content="Securing the Rebus Chain by staking REBUS🔒 🔑">
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../../resources/css/retype.css?v=2.3.0.709073345129" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.3.0.709073345129" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../../resources/js/config.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
-    <script type="text/javascript" src="../../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../../resources/js/lunr.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -46,10 +49,10 @@
                 <!-- Logo -->
                 <div class="flex items-center justify-between h-full py-2 md:w-75">
                     <div class="flex items-center px-2 md:px-6">
-                        <a id="docs-site-logo" href="../../../" class="flex items-center leading-snug text-2xl">
+                        <a id="docs-site-logo" href="../../" class="flex items-center leading-snug text-2xl">
                             <span class="grow-0 shrink-0 overflow-hidden">
-                                <img class="max-h-10 dark:hidden md:inline-block" src="../../../public/assets/rebus-logo.png">
-                                <img class="max-h-10 hidden dark:inline-block" src="../../../public/assets/rebus-logo-dark.png">
+                                <img class="max-h-10 dark:hidden md:inline-block" src="../../public/assets/rebus-logo.png">
+                                <img class="max-h-10 hidden dark:inline-block" src="../../public/assets/rebus-logo-dark.png">
                             </span>
                         </a>
                     </div>
@@ -184,14 +187,152 @@
                                 <div id="docs-sidebar-right-toggle"></div>
                 
                                 <!-- Page content  -->
-<doc-anchor-target id="initialise-the-contract" class="break-words">
+<doc-anchor-target id="staking" class="break-words">
     <h1>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#initialise-the-contract">#</doc-anchor-trigger>
-        <span>Initialise the Contract</span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#staking">#</doc-anchor-trigger>
+        <span>Staking</span>
     </h1>
 </doc-anchor-target>
+<p>Staking is the process of locking up a digital asset non custodially (REBUS in the case of the Rebus Chain) to provide economic security to a public blockchain.</p>
+<p><span class="docs-emoji">&#x26AA;</span>️ <strong>Secure the network -</strong> With <strong>REBUS</strong>, you have the power to contribute to the security and governance of the Rebus Chain through staking and voting on governance proposals.</p>
+<p><span class="docs-emoji">&#x26AA;</span>️ <strong>Earn rewards -</strong> By staking to a validator, you are contributing to the security of the network and are rewarded with <strong>REBUS</strong> through staking rewards.</p>
+<p><span class="docs-emoji">&#x26AA;</span>️ <strong>Vote for the future -</strong> Staking <strong>REBUS</strong> grants the wallet owner the right to vote on governance proposals and contribute to making decisions on the future and direction of the network.</p>
+<doc-anchor-target id="staking-rewards">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#staking-rewards">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x2705;</span> <strong>Staking rewards</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>When the staking (delegation) transaction is complete, rewards will start to be generated immediately on a block per block basis. At any time, stakers can claim their accumulated rewards, via their supported wallet.</p>
+<p><strong>Where do rewards come from?</strong></p>
+<p>Staking rewards are distributed to staked <strong>REBUS</strong> in two ways:</p>
+<ol>
+<li><strong>Transaction fees</strong> - transaction fees collected on the Rebus Chain are distributed to staked REBUS.</li>
+<li><strong>Newly distributed REBUS -</strong> New REBUS created through the network inflation is distributed to REBUS stakers each block over the first 15 years of the Rebus Chain operation.</li>
+</ol>
+<p>Learn more about the reward Schedule: <a href="../../rebus/economic-overview/incentive-structure/">Incentive Structure</a></p>
+<doc-anchor-target id="️-staking-safely">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#️-staking-safely">#</doc-anchor-trigger>
+        <span><span class="docs-emoji">&#x26AA;</span>️ <strong>Staking safely</strong></span>
+    </h3>
+</doc-anchor-target>
+<p>Staking REBUS is not risk-free. If a validator has downtime or underperforms, a percentage of REBUS delegated to them may be forfeited. This process is termed &quot;slashing&quot;. To mitigate potential slashing risks to stakers, we have provided a guideline to assist delegators in selecting a validator with a low risk of slashing.</p>
+<doc-anchor-target id="selecting-a-validator">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#selecting-a-validator">#</doc-anchor-trigger>
+        <span>Selecting a Validator</span>
+    </h2>
+</doc-anchor-target>
+<p>There are many validator candidates to select from when it comes to delegating your REBUS token. The following discussion aims to provide you with some points for consideration when selecting a validator for staking your REBUS. It is important that you do a little research before delegating your REBUS to a validator.</p>
+<p>Some points to consider when selecting a validator:</p>
+<ul>
+<li><doc-anchor-trigger to="#decentralization-of-the-network">Decentralization of the network</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#reputation-of-the-validator">Reputation of the validator</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#reachability-of-the-validator">Reachability of the validator</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#The-validator-setup">The validator setup</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#project-and-community-involvement">Project and Community involvement</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#value-added-by-the-validator">Value added by the validator</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#commission-taken-by-the-validator">Commission taken by the validator</doc-anchor-trigger></li>
+<li><doc-anchor-trigger to="#slashing-history-and-validator-uptime">Slashing history and validator uptime</doc-anchor-trigger></li>
+</ul>
+<doc-anchor-target id="decentralization-of-the-network">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#decentralization-of-the-network">#</doc-anchor-trigger>
+        <span>Decentralization of the network</span>
+    </h3>
+</doc-anchor-target>
+<p>There are a limited number of validators in the active set for the network. Each validator will vote on consensus for each proposed block. The more tokens a validator has staked to them increases the power of the validators vote. It is therefore important that no one validator gains too much voting power over the network, and thus becoming centralized. To help with decentralization of voting power, you may consider delegating to validators lower on the list of total delegation.</p>
+<doc-anchor-target id="reputation-of-the-validator">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#reputation-of-the-validator">#</doc-anchor-trigger>
+        <span>Reputation of the validator</span>
+    </h3>
+</doc-anchor-target>
+<p>Each validator is responsible to provide as much information as possible to potential delegators.</p>
+<p>You may want to investigate validators you are planning on delegating to. Most validators will provide some extra information such as a bio and website that will be available by clicking on the validator&#x27;s name in the <a href="https://mintscan.io/rebus">https://mintscan.io/rebus</a> blockchain explorer interface.</p>
+<p>Some validators run telegram, discord, or twitter channels where you can directly contact the operators and receive updates so that you are informed about the validators operations and maintenance activities.</p>
+<p>Many validator operators have representation in the official Rebus Discord and Telegrams channels.</p>
+<p>You may want to ask about particular validators in the Rebus Discord channels and/or Telegram chat.</p>
+<doc-anchor-target id="reachability-of-the-validator">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#reachability-of-the-validator">#</doc-anchor-trigger>
+        <span>Reachability of the validator</span>
+    </h3>
+</doc-anchor-target>
+<p>Apart from some validators running a telegram, discord etc. consider how reachable a validator is. For instance when you want to know certain specifics mentioned in this chapter or an active governance proposal, his or her validator setup (hardware used or security measures taken etc.). Try getting in touch with the validators you like to stake to.</p>
+<doc-anchor-target id="the-validator-setup">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#the-validator-setup">#</doc-anchor-trigger>
+        <span>The Validator setup</span>
+    </h3>
+</doc-anchor-target>
+<p>When you delegate to a validator nobody wants that validator to be compromised in some way in order to prevent any form of slashing. A validator can take many precautions to mitigate this. For example: they can make a difference by upholding a good hardware standard for their validator, implementing a sentry, setting up good monitoring and alerting infrastructure and making sure they have appropriate security configuration.</p>
+<doc-anchor-target id="project-and-community-involvement">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#project-and-community-involvement">#</doc-anchor-trigger>
+        <span>Project and Community involvement</span>
+    </h3>
+</doc-anchor-target>
+<p>Anyone can start a validator if technically capable. A difference apart from the technical aspects can be made by their involvement in the project and the community. Some are very actively trying to help the community in many different ways. Helping the community will help provide an excellent end user experience to Rebus network users and will in turn help the Rebus network grow. This in turn will help drive adoption of the Rebus network.</p>
+<p>Validators that are involved with the project means that they are up-to-date on the progress of the project, what is happening and they can use that knowledge to help educate the community and the rest of the world.</p>
+<p>Active validators are also more likely to be well informed of network upgrades. If validators were to miss software upgrades, they would be unable to reach consensus with the rest of the network. It is most likely that the validator would end up being jailed and thus slashed for downtime.</p>
+<!-- TODO add back URL for list of validators 
+A list of active Rebus Chain contributors is maintained [here](broken-reference). 
+-->
+<doc-anchor-target id="value-added-by-the-validator">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#value-added-by-the-validator">#</doc-anchor-trigger>
+        <span>Value added by the validator</span>
+    </h3>
+</doc-anchor-target>
+<p>Some validators are able to add value for delegators in various ways. This information should be available on the validators websites.</p>
+<doc-anchor-target id="commission-taken-by-the-validator">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#commission-taken-by-the-validator">#</doc-anchor-trigger>
+        <span>Commission taken by the validator</span>
+    </h3>
+</doc-anchor-target>
+<p>Validator commission is a percentage of the REBUS rewards earned that is provided to the validator in return for their service. Validators have ongoing costs for running their validator service and it is fair that they are compensated for their time, resources and knowledge that they commit to running their validators. In addition, some validator operators commit a significant amount of their time and resources to assisting the community through the various social platforms.</p>
+<p>Each validator has the freedom to set their own commission rates. Validators have the power to alter their commission rates as they desire within the range each validator sets when they create their validator.</p>
+<p>When considering the amount of commission are willing to pay, you may consider that some validators will provide the bare minimum infrastructure to run a validator while others will run enterprise grade hardware and security which comes with higher operating costs. Sometimes a higher commission rate may represent the higher costs for some operators to provide a higher level of service. However, this may not always be the case.</p>
+<doc-anchor-target id="slashing-history-and-validator-uptime">
+    <h3>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#slashing-history-and-validator-uptime">#</doc-anchor-trigger>
+        <span>Slashing history and validator uptime</span>
+    </h3>
+</doc-anchor-target>
+<p>Each validator must strive to provide the highest uptime possible. From time to time, a validator may be jailed for too much downtime or double signing a block. If a validator is jailed, they and their delegators are penalized by losing a portion of their staked tokens (known as &quot;slashing&quot;).</p>
+<p>You will be able to see a validators jail history by browsing their transaction history in the block explorer. Look out for &quot;unjail&quot; transactions.</p>
+<p>Under certain circumstances, a validator may be permanently jailed (aka &quot;tombstoned&quot;. This means they can never release themselves from jail and will no longer receive block rewards or be able to vote.</p>
+<doc-anchor-target id="staking-tutorials">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#staking-tutorials">#</doc-anchor-trigger>
+        <span>Staking Tutorials</span>
+    </h2>
+</doc-anchor-target>
+<p>The following tutorials aim to provide step by instructions to stake your REBUS to a validator of your choice.</p>
+<p><a href="staking-rebus/">staking-rebus.md</a></p>
+<doc-anchor-target id="command-line-reference">
+    <h2>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#command-line-reference">#</doc-anchor-trigger>
+        <span>Command Line Reference</span>
+    </h2>
+</doc-anchor-target>
+<p><a href="../../cli/modules/staking/">staking.md</a></p>
+<p><a href="../../cli/modules/distribution/">distribution.md</a></p>
 
-                                
+                                <div class="flex items-center mt-6 mb-6 clear-both">
+                                    <span>
+                                        <a href="../../tags/">
+                                            <svg class="inline-block -mb-px mr-1.5 text-blue-500 dark:text-blue-400" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" overflow="visible" fill="currentColor"><g><path d="M21.3 9.88l-8.59-8.59C12.52 1.11 12.27 1 12 1H2c-.55 0-1 .45-1 1v10c0 .27.11.52.29.71l8.59 8.58c.57.57 1.32.88 2.12.88s1.55-.31 2.12-.88l7.17-7.17a3.009 3.009 0 00.01-4.24zm-1.42 2.82l-7.17 7.17c-.39.39-1.02.39-1.42 0L3 11.59V3h8.59l8.29 8.29c.39.39.39 1.03 0 1.41z" /><path d="M7.01 6C6.45 6 6 6.45 6 7s.45 1 1 1 1-.45 1-1-.44-1-.99-1z" /></g></svg>
+                                        </a>
+                                        <span class="mr-2"><a href="../../tags/knowledge/" class="no-link inline-flex items-center justify-center font-medium leading-none whitespace-nowrap text-blue-500 dark:text-blue-400 border border-blue-500 dark:border-blue-400 hover:bg-blue-100 dark:hover:bg-transparent dark:hover:border-blue-200 dark:hover:text-blue-200 transition-colors duration-200 ease-out h-6 px-2 text-xs rounded-md">
+                                    <span>knowledge</span>
+                                </a></span>
+                                    </span>
+                                </div>
+                
                                 <!-- Required only on API pages -->
                                 <doc-toolbar-member-filter-no-results />
                             </div>
@@ -199,20 +340,20 @@
                             
                                 <nav class="flex mt-14">
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../../development/cw1-tutorial/execute-commands/">
+                                        <a class="px-5 py-4 h-full flex items-center break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-l-lg transition-colors duration-150 relative hover:z-5" href="../../knowledge/application/tools/">
                                             <svg xmlns="http://www.w3.org/2000/svg" class="mr-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19 11H7.41l5.29-5.29a.996.996 0 10-1.41-1.41l-7 7a1 1 0 000 1.42l7 7a1.024 1.024 0 001.42-.01.996.996 0 000-1.41L7.41 13H19c.55 0 1-.45 1-1s-.45-1-1-1z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                             <span>
                                                 <span class="block text-xs font-normal text-gray-400 dark:text-dark-400">Previous</span>
-                                                <span class="block mt-1">Execute commands</span>
+                                                <span class="block mt-1">Rebus tools</span>
                                             </span>
                                         </a>
                                     </div>
                             
                                     <div class="w-1/2">
-                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../../development/cw1-tutorial/installation/">
+                                        <a class="px-5 py-4 -mx-px h-full flex items-center justify-end break-normal font-medium text-blue-500 dark:text-blue-400 border border-gray-300 hover:border-gray-400 dark:border-dark-650 dark:hover:border-dark-450 rounded-r-lg transition-colors duration-150 relative hover:z-5" href="../../knowledge/staking/staking-rebus/">
                                             <span>
                                                 <span class="block text-xs font-normal text-right text-gray-400 dark:text-dark-400">Next</span>
-                                                <span class="block mt-1">Installation</span>
+                                                <span class="block mt-1">Rebus Staking UI</span>
                                             </span>
                                             <svg xmlns="http://www.w3.org/2000/svg" class="ml-3" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" overflow="visible"><path d="M19.92 12.38a1 1 0 00-.22-1.09l-7-7a.996.996 0 10-1.41 1.41l5.3 5.3H5c-.55 0-1 .45-1 1s.45 1 1 1h11.59l-5.29 5.29a.996.996 0 000 1.41c.19.2.44.3.7.3s.51-.1.71-.29l7-7c.09-.09.16-.21.21-.33z" /><path fill="none" d="M0 0h24v24H0z" /></svg>
                                         </a>
@@ -256,6 +397,6 @@
 
     <div id="docs-overlay-target"></div>
 
-    <script>window.__DOCS__ = { "title": "Initialise the Contract", level: 3, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
+    <script>window.__DOCS__ = { "title": "Staking", level: 2, icon: "file", hasPrism: false, hasMermaid: false, hasMath: false }</script>
 </body>
 </html>
