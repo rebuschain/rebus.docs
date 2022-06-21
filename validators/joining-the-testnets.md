@@ -73,7 +73,7 @@ Active and running peers will be required to tell your node where to connect to 
 
 ```bash
 #Set the base repo URL for the testnet & retrieve peers
-CHAIN_REPO="https://raw.githubusercontent.com/rebuschain/rebus.testnet.private/master" && \
+CHAIN_REPO="https://raw.githubusercontent.com/rebuschain/rebus.testnet/master" && \
 export PEERS="$(curl -s "$CHAIN_REPO/seeds.txt")"
 
 # check it worked
@@ -120,7 +120,7 @@ Note that this means if you jumped ahead and already downloaded the genesis file
 ### Download the genesis file
 
 ```
-curl https://raw.githubusercontent.com/rebuschain/rebus.testnet.private/master/genesis.json > ~/.rebusd/config/genesis.json
+curl https://raw.githubusercontent.com/rebuschain/rebus.testnet/master/genesis.json > ~/.rebusd/config/genesis.json
 ```
 
 This will replace the genesis file created using `rebusd init` command with the genesis file for the testnet. \*\*\*\*
