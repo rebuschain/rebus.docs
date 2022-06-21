@@ -1,9 +1,9 @@
-# Incentive structure
+# Rebus block reward distribution
 
-### Rebus POS reward schedule
+### Rebus block reward schedule
 
 {% hint style="info" %}
-The coins reserved for the POS block reward are: 585,000,000 . The coins are released with a decreasing inflation for the next 15 years after the genesis:
+The coins reserved for the block reward are: 585,000,000 . The coins are released with a decreasing inflation for the next 15 years after the genesis:
 {% endhint %}
 
 | Year | Percentage |  Coins Released |
@@ -23,4 +23,14 @@ The coins reserved for the POS block reward are: 585,000,000 . The coins are rel
 | 13 | 2.00% | 11,700,000 |
 | 14 | 2.00% | 11,700,000 |
 | 15 | 2.00% | 11,700,000 |
-| Coins POS reward | 100.00% | 585,000,000 |
+| Coins block reward | 100.00% | 585,000,000 |
+
+
+#### The block reward is distributed following these rules:
+
+- POS Validator/delegators:  72%
+- Ethical: 8%
+- Community: 5%
+- Rebus treasury: 11%
+- Rebus liquidity program: 4%
+

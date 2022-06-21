@@ -9,13 +9,13 @@ order: 997
 
 Below is the list of Rebus testnets and their current status. You will need to know the version tag for installation of the `rebusd` binary.
 
-For details of upgrades on the current testnet, as well as syncing, you can [check out the testnets repo, which is the definitive source of truth](https://github.com/CosmosContracts/testnets).
+For details of upgrades on the current testnet, as well as syncing, you can [check out the testnets repo, which is the definitive source of truth](https://github.com/rebuschain/rebus.testnet).
 
 If you get stuck, then please ask on Discord.
 
 | chain-id | Current Github version tag |             Description            | Status  |
 | -------- | -------------------------- | :--------------------------------: | ------- |
-| uni-2    | v4.0.0-beta                | Testing ground for wasm contracts. | current |
+| reb_3333-1    | v1.0.0                | Testing Rebus platform. | current |
 
 ## Minimum Hardware Requirements
 
@@ -23,7 +23,7 @@ The minimum recommended hardware requirements for running a validator for the Re
 
 | Chain-id | Requirements                                                                          |
 | -------- | ------------------------------------------------------------------------------------- |
-| uni-2    | <ul><li>16GB RAM</li><li>200GB of disk space</li><li>2 Cores (modern CPU's)</li></ul> |
+| reb_3333-1    | <ul><li>16GB RAM</li><li>200GB of disk space</li><li>at least 2 cores cpu</li></ul> |
 
 {% hint style="warning" %}
 These specifications are the minimum recommended. As Rebus Network is a smart contract platform, it can at times be very demanding on hardware. Low spec validators WILL get stuck on difficult to process blocks.
@@ -53,7 +53,7 @@ Choose the `<chain-id>` testnet you would like to join from [here](joining-the-t
 CHAIN_ID=<chain-id>
 
 #Example
-CHAIN_ID=uni-2
+CHAIN_ID=reb_3333-1
 ```
 
 ### Set your moniker name
@@ -64,33 +64,33 @@ Choose your `<moniker-name>`, this can be any name of your choosing and will ide
 MONIKER_NAME=<moniker-name>
 
 #Example
-MONIKER_NAME="Validatron 9000"
+MONIKER_NAME="ValidatorT1000"
 ```
 
 ### **Set persistent peers**
 
-Persistent peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the chosen testnet:
+Active and running peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the Rebus testnet:
 
 ```bash
 #Set the base repo URL for the testnet & retrieve peers
-CHAIN_REPO="https://raw.githubusercontent.com/CosmosContracts/testnets/main/$CHAIN_ID" && \
-export PEERS="$(curl -s "$CHAIN_REPO/persistent_peers.txt")"
+CHAIN_REPO="https://raw.githubusercontent.com/rebuschain/rebus.testnet.private/master" && \
+export PEERS="$(curl -s "$CHAIN_REPO/seeds.txt")"
 
 # check it worked
 echo $PEERS
 ```
 
 {% hint style="info" %}
-NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.rebus/config/config.toml` instead.
+NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.rebusd/config/config.toml` instead.
 {% endhint %}
 
 ### Set minimum gas prices
 
-In `$HOME/.rebus/config/app.toml`, set gas prices:
+In `$HOME/.rebus/config/app.toml`, set gas minimum prices:
 
 ```
 # note testnet denom
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025urebusx\"/" ~/.rebus/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0008arebus\"/" ~/.rebus/config/app.toml
 ```
 
 ## Setting up the Node
@@ -107,7 +107,7 @@ These instructions will direct you on how to initialise your node, synchronise t
 rebusd init $MONIKER_NAME --chain-id $CHAIN_ID
 ```
 
-This will generate the following files in `~/.rebus/config/`
+This will generate the following files in `~/.rebusd/config/`
 
 * `genesis.json`
 * `node_key.json`
@@ -120,7 +120,7 @@ Note that this means if you jumped ahead and already downloaded the genesis file
 ### Download the genesis file
 
 ```
-curl https://raw.githubusercontent.com/CosmosContracts/testnets/main/$CHAIN_ID/genesis.json > ~/.rebus/config/genesis.json
+curl https://raw.githubusercontent.com/rebuschain/rebus.testnet.private/master/genesis.json > ~/.rebusd/config/genesis.json
 ```
 
 This will replace the genesis file created using `rebusd init` command with the genesis file for the testnet. \*\*\*\*
@@ -138,7 +138,7 @@ sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.rebus
 Create a new key pair for your validator:
 
 ```bash
-rebusd keys add <key-name>
+rebusd keys add <key-name> --coin-type 118 --algo secp256k1
 
 # Query the keystore for your public address
 rebusd keys show <key-name> -a
@@ -149,8 +149,10 @@ Replace `<key-name>` with a key name of your choosing.
 If you already have a key from a previous testnet, you can recover it using the mnemonic:
 
 ```bash
-rebusd keys add <key-name> --recover
+rebusd keys add <key-name> --recover  --coin-type 118 --algo secp256k1
 ```
+
+The key is Keplr and Keplr+Ledger wallet compatible. (type=118 algo=secp256k1)
 
 {% hint style="danger" %}
 After creating a new key, the key information and seed phrase will be shown. It is essential to write this seed phrase down and keep it in a safe place. The seed phrase is the only way to restore your keys.
@@ -187,7 +189,7 @@ To upgrade the node to a validator, you will need to submit a `create-validator`
 
 ```bash
 rebusd tx staking create-validator \
-  --amount 9000000urebusx \
+  --amount 9000000arebus \
   --commission-max-change-rate "0.1" \
   --commission-max-rate "0.20" \
   --commission-rate "0.1" \
@@ -196,7 +198,7 @@ rebusd tx staking create-validator \
   --pubkey=$(rebusd tendermint show-validator) \
   --moniker $MONIKER_NAME \
   --chain-id $CHAIN_ID \
-  --gas-prices 0.025urebusx \
+  --gas-prices 0.0025arebus \
   --from <key-name>
 ```
 
