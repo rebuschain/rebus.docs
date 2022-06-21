@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709139196621">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709140955173">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.3.0.709139196621" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.3.0.709140955173" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.709139196621" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.709140955173" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.709139196621" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.709139196621" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.709140955173" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.709140955173" defer></script>
 
     <link href="/public/rebus.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/public/assets/rebus-icon.png">
@@ -314,13 +314,37 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up</code></pr
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">rebusd keys list</code></pre>
 </doc-codeblock></div>
-<p>Import a key from a mnemonic:</p>
+<p>Import a key from a mnemonic (Comsos/Keplr or Keplr+Ledger):</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">rebusd keys add &lt;new-key-name&gt; --recover</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">rebusd keys add &lt;new-key-name&gt; --recover --coin-type 118 --algo secp256k1 </code></pre>
+</doc-codeblock></div>
+<p>Import a key from a mnemonic (Metamask or Metamask+Ledger):</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">rebusd keys add &lt;new-key-name&gt; --recover --coin-type 60 --algo eth_secp256k1 </code></pre>
 </doc-codeblock></div>
 <p>Export a private key (warning: don&#x27;t do this unless you know what you&#x27;re doing!)</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">rebusd keys export &lt;your-key-name&gt; --unsafe --unarmored-hex</code></pre>
+</doc-codeblock></div>
+<p>Convert address from Bench32 to HEX (example):</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">rebusd debug addr rebus1dl90xa89ljj29mna8uasdxs3nejdw46x8767tc
+
+Address bytes: [111 202 243 116 229 252 164 162 238 125 63 59 6 154 17 158 100 215 87 70]
+Address (hex): 6FCAF374E5FCA4A2EE7D3F3B069A119E64D75746
+Address (EIP-55): 0x6fCAf374E5fCa4a2ee7D3F3B069A119e64D75746
+Bech32 Acc: rebus1dl90xa89ljj29mna8uasdxs3nejdw46x8767tc
+Bech32 Val: rebusvaloper1dl90xa89ljj29mna8uasdxs3nejdw46xefxp7m</code></pre>
+</doc-codeblock></div>
+<p>Convert address from HEX to Bench32 (example):</p>
+<div class="codeblock-wrapper"><doc-codeblock>
+<pre class="language-bash"><code v-pre class="language-bash">rebusd debug addr 6FCAF374E5FCA4A2EE7D3F3B069A119E64D75746
+
+Address bytes: [111 202 243 116 229 252 164 162 238 125 63 59 6 154 17 158 100 215 87 70]
+Address (hex): 6FCAF374E5FCA4A2EE7D3F3B069A119E64D75746
+Address (EIP-55): 0x6fCAf374E5fCa4a2ee7D3F3B069A119e64D75746
+Bech32 Acc: rebus1dl90xa89ljj29mna8uasdxs3nejdw46x8767tc
+Bech32 Val: rebusvaloper1dl90xa89ljj29mna8uasdxs3nejdw46xefxp7m</code></pre>
 </doc-codeblock></div>
 <p>Withdraw rewards (including validator commission), where <code v-pre>rebusvaloper1...</code> is the validator address:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
