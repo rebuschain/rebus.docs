@@ -75,15 +75,37 @@ git checkout v1.0.0
 Once you're on the correct tag, you can build:
 
 ```bash
-# in rebus dir
+# in rebus dir, the binary will be in the build/ folder
+make 
+```
+
+```bash
+# in rebus dir, the binary will be installed in the GO root
 make install
 ```
+
+Build using docker:
+```bash
+# in rebus dir, the binary can be used from docker (or copied from docker)
+make build-docker
+```
+
 
 To confirm that the installation has succeeded, you can run:
 
 ```bash
 rebusd version
 ```
+
+using docker:
+
+```bash
+# create /opt/rebusdata before 
+docker run -it -p 26657:26657 -p 26656:26656 -p 1317:1317 -v /opt/rebusdata/:/.rebusd -t rebuslab/rebus:latest version
+```
+
+
+
 
 ## Connecting to the network
 

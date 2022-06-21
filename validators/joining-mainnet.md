@@ -19,7 +19,7 @@ Below is the list of Rebus mainnet id's and their current status. You will need 
 
 | chain-id | Description                                        |  Status | Block Start | Block Finish |
 | -------- | -------------------------------------------------- | :-----: | ----------- | ------------ |
-| rebus-1   | This is the first chain-id from the genesis event. | current | 0           | N/A          |
+| reb_1111-1   | This is the first chain-id from the genesis. | current | 0           | N/A          |
 
 ## Recommended Minimum Hardware
 
@@ -27,7 +27,7 @@ The minimum recommended hardware requirements for running a validator for the Re
 
 | Chain-id | Requirements                                                                                   |
 | -------- | ---------------------------------------------------------------------------------------------- |
-| rebus-1   | <ul><li>4 Cores (modern CPU's)</li><li>32GB RAM</li><li>1TB of storage (SSD or NVME)</li></ul> |
+| reb_1111-1   | <ul><li>4 Cores (modern CPU's)</li><li>32GB RAM</li><li>1TB of storage (SSD or NVME)</li></ul> |
 
 {% hint style="danger" %}
 These specifications are the minimum recommended. As Rebus Network is a smart contract platform, it can at times be very demanding on hardware. Low spec validators WILL get stuck on difficult to process blocks.
@@ -61,13 +61,13 @@ Choose the `<chain-id>` for the mainnet you would like to join from [here](joini
 CHAIN_ID=<chain-id>
 
 # Example
-CHAIN_ID=rebus-1
+CHAIN_ID=reb_1111-1
 ```
 
 You can also set this in your `.profile` file:
 
 ```bash
-export CHAIN_ID=rebus-1
+export CHAIN_ID=reb_1111-1
 ```
 
 Then source it:
@@ -84,19 +84,21 @@ Choose your `<moniker-name>`, this can be any name of your choosing and will ide
 MONIKER_NAME=<moniker-name>
 
 # Example
-MONIKER_NAME="Validatron 9000"
+MONIKER_NAME="ValidatorT1000"
 ```
 
-### **Set persistent peers**
+### **Setting the  peers**
 
-Persistent peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the chosen mainnet:
+Active and running peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the chosen mainnet:
 
 ```bash
-# Set the base repo URL for mainnet & retrieve peers
-CHAIN_REPO="https://raw.githubusercontent.com/CosmosContracts/mainnet/main/$CHAIN_ID" && \
-export PEERS="$(curl -s "$CHAIN_REPO/persistent_peers.txt")"
-```
+#Set the base repo URL for the testnet & retrieve peers
+CHAIN_REPO="https://raw.githubusercontent.com/rebuschain/rebus.mainnet/master" && \
+export PEERS="$(curl -s "$CHAIN_REPO/seeds.txt")"
 
+# check it worked
+echo $PEERS
+```
 {% hint style="info" %}
 NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.rebus/config/config.toml` instead.
 {% endhint %}
@@ -106,7 +108,7 @@ NB: If you are unsure about this, you can ask in discord for the current peers a
 In `$HOME/.rebus/config/app.toml`, set minimum gas prices:
 
 ```
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025urebus,0.001ibc\/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\"/" ~/.rebus/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0008arebus\"/" ~/.rebus/config/app.toml
 ```
 
 {% hint style="info" %}
@@ -123,7 +125,7 @@ These instructions will direct you on how to initialize your node, synchronize t
 rebusd init $MONIKER_NAME --chain-id $CHAIN_ID
 ```
 
-This will generate the following files in `~/.rebus/config/`
+This will generate the following files in `~/.rebusd/config/`
 
 * `genesis.json`
 * `node_key.json`
@@ -132,17 +134,17 @@ This will generate the following files in `~/.rebus/config/`
 ### Download the genesis file
 
 ```
-curl https://raw.githubusercontent.com/CosmosContracts/mainnet/main/$CHAIN_ID/genesis.json > ~/.rebus/config/genesis.json
+curl https://raw.githubusercontent.com/rebuschain/rebus.mainnet/master/genesis.json > ~/.rebusd/config/genesis.json
 ```
 
 This will replace the genesis file created using `rebusd init` command with the mainnet `genesis.json`. \*\*\*\*
 
-### **Set persistent peers**
+### **Setting the peers**
 
-Using the peers variable we set earlier, we can set the `persistent_peers` in `~/.rebus/config/config.toml`:
+Using the peers variable we set earlier, we can set the `seeds` in `~/.rebusd/config/config.toml`:
 
 ```bash
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.rebus/config/config.toml
+sed -i.bak -e "s/^seeds *=.*/seeds = \"$PEERS\"/" ~/.rebusd/config/config.toml
 ```
 
 ### **Create (or restore) a local key pair**
@@ -151,17 +153,18 @@ Either create a new key pair, or restore an existing wallet for your validator:
 
 ```bash
 # Create new keypair
-rebusd keys add <key-name>
+rebusd keys add <key-name> --coin-type 118 --algo secp256k1
 
 # Restore existing rebus wallet with mnemonic seed phrase.
 # You will be prompted to enter mnemonic seed.
-rebusd keys add <key-name> --recover
+rebusd keys add <key-name> --recover --coin-type 118 --algo secp256k1
 
 # Query the keystore for your public address
 rebusd keys show <key-name> -a
 ```
 
 Replace `<key-name>` with a key name of your choosing.
+
 
 {% hint style="danger" %}
 After creating a new key, the key information and seed phrase will be shown. It is essential to write this seed phrase down and keep it in a safe place. The seed phrase is the only way to restore your keys.
@@ -171,7 +174,7 @@ After creating a new key, the key information and seed phrase will be shown. It 
 
 You will require some Rebus tokens to bond to your validator. To be in the active set you will need to have enough tokens to be in the top 125 validators by delegation weight.
 
-If you do not have any Rebus tokens for you validator you can purchase tokens on Osmosis or Emeris.
+If you do not have any Rebus tokens for you validator you can purchase tokens [here](https://www.rebuschain.com/where).
 
 ## Setup cosmovisor
 
@@ -202,7 +205,7 @@ To upgrade the node to a validator, you will need to submit a `create-validator`
 
 ```bash
 rebusd tx staking create-validator \
-  --amount 9000000urebus \
+  --amount 9000000arebus \
   --commission-max-change-rate "0.1" \
   --commission-max-rate "0.20" \
   --commission-rate "0.1" \
@@ -211,7 +214,7 @@ rebusd tx staking create-validator \
   --pubkey=$(rebusd tendermint show-validator) \
   --moniker $MONIKER_NAME \
   --chain-id $CHAIN_ID \
-  --gas-prices 0.025urebus \
+  --gas-prices 0.0025arebus \
   --from <key-name>
 ```
 
@@ -232,27 +235,4 @@ There are certain files that you need to backup to be able to restore your valid
 
 It is recommended that you encrypt the backup of these files.
 
-## Syncing After Lupercalia
 
-🏗🚧 Under construction​ 🏗🚧
-
-### Syncing from a backup
-
-After creating your validator private key, you will want to sync using a backup to after the Lupercalia chain restart, and the security patch that followed. You can do this using a snapshot.
-
-The example instructions here should work, although the heights of the snapshots will change. You can check out instructions and current versions from Pokachu [here](https://polkachu.com/tendermint\_snapshots/rebus).
-
-```bash
-wget -O rebus_2616376.tar.lz4 https://snapshots2.polkachu.com/snapshots/rebus/rebus_2616376.tar.lz4
-rebusd unsafe-reset-all
-lz4 -c -d rebus_2616376.tar.lz4  | tar -x -C ~/.rebus
-sudo systemctl start cosmovisor
-rm rebus_2616376.tar.lz4
-sudo journalctl -u cosmovisor -f
-```
-
-Make sure that you back up your validator's private key before doing `rebusd unsafe-reset-all`.
-
-### Full sync without a backup
-
-To do a full sync without a backup, and avoid trusting a single backup provider, you can sync from the Lupercalia genesis. The best guide out there has been provided by [Simon from Confio](https://gist.github.com/webmaster128/af65a1d499bf246e08dac99d445dd26a).
