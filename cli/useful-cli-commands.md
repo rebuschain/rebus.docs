@@ -1,3 +1,7 @@
+---
+icon: feed-star
+order: 999
+---
 # Useful CLI Commands
 
 Get standard debug info from the `rebus` daemon:

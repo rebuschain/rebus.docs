@@ -2,6 +2,8 @@
 description: >-
   A general introduction Rebus cli along with a brief description of commands and
   flags
+order: 1000
+icon: rocket
 ---
 
 # Introduction

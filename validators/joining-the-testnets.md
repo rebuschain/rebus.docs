@@ -1,6 +1,7 @@
 ---
 description: General instructions on how to join the Rebus testnets
 order: 997
+icon: /public/assets/testnet.png
 ---
 
 # Joining Testnets

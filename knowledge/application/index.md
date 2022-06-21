@@ -12,22 +12,22 @@ The application will allow the user to interact with different parts of the Rebu
 
 ## Staking Tutorials
 
-[!ref](/knowledge/staking/README.md)
+[!ref Staking Overview](/knowledge/staking/README.md)
 
-[!ref](/knowledge/staking/staking-rebus.md)
+[!ref How to Stake Rebus](/knowledge/staking/staking-rebus.md)
 
 ## Assets Tutorials
 
-[!ref](/knowledge/assets/README.md)
+[!ref Assets Overview](/knowledge/assets/README.md)
 
 ## Airdrop Tutorials
 
-[!ref](/knowledge/airdrop/README.md)
+[!ref Airdrop Overview](/knowledge/airdrop/README.md)
 
 ## Voting Tutorials
 
-[!ref](/knowledge/voting/README.md)
+[!ref Voting Overview](/knowledge/voting/README.md)
 
 ## Tools Tutorials
 
-[!ref](/knowledge/tools.md)
+[!ref Rebus Tools](/knowledge/tools.md)

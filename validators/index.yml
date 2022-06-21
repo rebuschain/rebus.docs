@@ -1,2 +1,3 @@
-order: -1000
+order: 900
 label: Node & Validators
+icon: server

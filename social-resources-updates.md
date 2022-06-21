@@ -1,3 +1,7 @@
+---
+Description: Rebus Branding Assets
+icon: /public/assets/share.png
+---
 # Social/Resources/Updates
 
 * [Website](https://www.rebuschain.com)

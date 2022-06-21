@@ -1,3 +1,8 @@
+---
+description: Rebus Supply API documentation
+icon: sun
+---
+
 # Supply API - Data
 
 The following API endpoints provide information about REBUS current circulating supply as well as the total available supply:
