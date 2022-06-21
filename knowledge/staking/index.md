@@ -105,16 +105,10 @@ Under certain circumstances, a validator may be permanently jailed (aka "tombsto
 
 The following tutorials aim to provide step by instructions to stake your REBUS to a validator of your choice.
 
-{% content-ref url="staking-rebus.md" %}
-[staking-rebus.md](staking-rebus.md)
-{% endcontent-ref %}
+[!ref How to stake Rebus](staking-rebus.md)
 
 ## Command Line Reference
 
-{% content-ref url="../../cli/modules/staking.md" %}
-[staking.md](../../cli/modules/staking.md)
-{% endcontent-ref %}
+[!ref](../../cli/modules/staking.md)
 
-{% content-ref url="../../cli/modules/distribution.md" %}
-[distribution.md](../../cli/modules/distribution.md)
-{% endcontent-ref %}
+[!ref](../../cli/modules/distribution.md)

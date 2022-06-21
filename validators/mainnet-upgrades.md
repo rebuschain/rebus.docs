@@ -3,6 +3,7 @@ description: >-
   Details of mainnet upgrades, installation block height and links to
   instructions.
 order: 995
+icon: /public/assets/upgrade.png
 ---
 
 # Mainnet Upgrades

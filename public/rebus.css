@@ -1,0 +1,7 @@
+.dark .simplebar-content img {
+    filter: brightness(0) invert(1);
+}
+
+.dark .simplebar-content ul li ul li img {
+    filter: invert(0);
+}

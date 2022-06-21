@@ -1,3 +1,7 @@
+---
+icon: /public/assets/rebus-icon.png
+---
+
 # Native Asset (REBUS)
 
 REBUS, the native coin of the Rebus chain and carries a variety of use cases within the ecosystem, including:

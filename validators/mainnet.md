@@ -1,6 +1,7 @@
 ---
 description: It's 🚀 time!
 order: 998
+icon: /public/assets/mainnet.png
 ---
 
 # Mainnet Setup and Tooling

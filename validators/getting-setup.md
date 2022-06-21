@@ -1,6 +1,7 @@
 ---
 description: Instruction to install the rebusd binary
 order: 1000
+icon: /public/assets/setup.png
 ---
 
 # Rebusd Installation and setup
