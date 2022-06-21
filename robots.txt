@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://rebuschain.com/sitemap.xml.gz
+Sitemap: https://docs.rebuschain.com/sitemap.xml.gz
