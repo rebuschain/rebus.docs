@@ -8,23 +8,12 @@ tags: [knowledge]
 
 ## Wallet Tutorials
 
-{% content-ref url="keplr-browser-extension.md" %}
-[keplr-browser-extension.md](keplr-browser-extension.md)
-{% endcontent-ref %}
+[!ref](keplr-browser-extension.md)
 
-{% content-ref url="metamask-browser-extension.md" %}
-[metamask-browser-extension.md](metamask-browser-extension.md)
-{% endcontent-ref %}
+[!ref](metamask-browser-extension.md)
 
 ## Command Line Reference
 
-{% content-ref url="../../cli/modules/keys.md" %}
-[keys.md](../../cli/modules/keys.md)
-{% endcontent-ref %}
+[!ref](../../cli/modules/keys.md)
 
-{% content-ref url="../../cli/modules/bank.md" %}
-[bank.md](../../cli/modules/bank.md)
-{% endcontent-ref %}
-
-
-
+[!ref](../../cli/modules/bank.md)

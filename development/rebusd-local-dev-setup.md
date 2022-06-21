@@ -1,5 +1,7 @@
 ---
 description: 🖥🛠
+icon: codespaces
+order: 1000
 ---
 
 # Rebusd Local Dev Setup

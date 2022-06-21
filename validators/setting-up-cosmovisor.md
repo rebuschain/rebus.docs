@@ -4,6 +4,7 @@ description: >-
   not used it before, then run it during a testnet to check you can get it set
   up correctly.
 order: 999
+icon: /public/assets/cosmoshub.png
 ---
 
 # Setting up Cosmovisor

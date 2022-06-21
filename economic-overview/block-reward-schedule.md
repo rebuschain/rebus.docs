@@ -1,3 +1,8 @@
+---
+icon: code-of-conduct
+label: Rebus Block Rewards
+---
+
 # Rebus block reward distribution
 
 ### Rebus block reward schedule

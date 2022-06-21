@@ -2,6 +2,8 @@
 description: >-
   In this tutorial we will explore the steps required to install and configure
   the Keplr browser extension.
+icon: /public/assets/keplr.png
+tags: [knowledge, wallets]
 ---
 
 # Keplr Browser Extension
