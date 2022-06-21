@@ -11,6 +11,7 @@ meta:
 
 edit:
   repo: github.com/rebuschain/rebus.docs
+  branch: master
 
 links:
 - text: Website
