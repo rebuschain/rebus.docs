@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709073345129">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709124545366">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -30,11 +30,11 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.3.0.709073345129" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.3.0.709124545366" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.709124545366" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.709124545366" data-turbo-eval="false" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -238,72 +238,6 @@
     </h3>
 </doc-anchor-target>
 <p>Where emergency security patches are required, node operators are notified via the official discord validator channels. Node operators will be required to halt their nodes manually at the required upgrade height, swap the patched binary and restart their nodes. After all node operators have upgraded and started their nodes the network will continue in the upgraded state.</p>
-<doc-anchor-target id="upgrade-path">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#upgrade-path">#</doc-anchor-trigger>
-        <span>Upgrade path</span>
-    </h2>
-</doc-anchor-target>
-<p>In order to sync a node with the current Rebus mainnet, you will need to follow these steps:</p>
-<doc-anchor-target id="genesis-binary-phoenix">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#genesis-binary-phoenix">#</doc-anchor-trigger>
-        <span>Genesis binary (Phoenix)</span>
-    </h3>
-</doc-anchor-target>
-<p>The genesis binary of the current itteration of Rebus Network mainnet is <a href="https://github.com/rebuschain/rebus.core/releases/tag/v3.0.0">v3.0.0</a>. This binary should be used with the Phoenix genesis file and associated wasm data folder. Refer to instructions detailed in <a href="../joining-mainnet/">Joining Mainnet</a>.</p>
-<p>Block height at Phoenix genesis is <strong>2578099</strong>.</p>
-<doc-anchor-target id="unnamed-security-upgrade">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#unnamed-security-upgrade">#</doc-anchor-trigger>
-        <span>Unnamed security upgrade</span>
-    </h3>
-</doc-anchor-target>
-<p>Binary version <a href="https://github.com/rebuschain/rebus.core/releases/tag/v3.1.0">v3.1.0</a>. </p>
-<p>Upgrade height <strong>2616300</strong>.</p>
-<p>This security upgrade was undertaken on April 10th 2022.</p>
-<p>The upgrade bumps wasmvm from beta7 to beta10. This version bump patches a major security vulnerability.</p>
-<doc-anchor-target id="unnamed-security-upgrade-1">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#unnamed-security-upgrade-1">#</doc-anchor-trigger>
-        <span>Unnamed security upgrade</span>
-    </h3>
-</doc-anchor-target>
-<p>Binary version <a href="https://github.com/rebuschain/rebus.core/releases/tag/v3.1.1">v3.1.1</a>. </p>
-<p>This is a non-breaking upgrade and can be completed by installing the binary any time after the v3.1.0 binary upgrade.</p>
-<p>This security upgrade was released on April 10th 2022.</p>
-<doc-anchor-target id="unity-upgrade">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#unity-upgrade">#</doc-anchor-trigger>
-        <span>Unity upgrade</span>
-    </h3>
-</doc-anchor-target>
-<p>Binary version <a href="https://github.com/rebuschain/rebus.core/releases/tag/v4.0.0">v4.0.0</a>. </p>
-<p>Upgrade height <strong>2951100</strong>. </p>
-<p>Refer to upgrade instructions <a href="https://github.com/CosmosContracts/mainnet/blob/main/rebus-1/UNITY_UPGRADE.md">here</a>.</p>
-<p>This upgrade was undertaken on May 4th 2022.</p>
-<p>This upgrade executed code that would remove tokens from the CCN (whale) account and store them into a smart contract. This action was taken as a result of the community governance vote on proposal 20. <a href="https://www.mintscan.io/rebus/proposals/20">REBUS Proposal#20</a>.</p>
-<p>An error in the code resulted in the tokens being stored in an un-initiated address. A further upgrade was required to move the tokens to the correct smart contract address.</p>
-<doc-anchor-target id="veritas-upgrade">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#veritas-upgrade">#</doc-anchor-trigger>
-        <span>Veritas upgrade</span>
-    </h3>
-</doc-anchor-target>
-<p>Binary version <a href="https://github.com/rebuschain/rebus.core/releases/tag/v5.0.1">v5.0.1</a>.</p>
-<p>Upgrade height <strong>3035000</strong>.</p>
-<p>Refer to upgrade instructions <a href="https://github.com/CosmosContracts/mainnet/blob/main/rebus-1/VERITAS_UPGRADE.md">here</a>.</p>
-<p>This upgrade was undertaken on May 10th 2022.</p>
-<p>This was a scheduled upgrade that re-moved the funds to the intended target address.</p>
-<doc-anchor-target id="unnamed-security-upgrade-2">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#unnamed-security-upgrade-2">#</doc-anchor-trigger>
-        <span>Unnamed security upgrade</span>
-    </h3>
-</doc-anchor-target>
-<p>Binary version <a href="https://github.com/rebuschain/rebus.core/releases/tag/v6.0.0">v6.0.0</a>.</p>
-<p>Upgrade height <strong>3159650</strong>.</p>
-<p>This upgrade was undertaken on May 19 2022.</p>
 
                                 
                                 <!-- Required only on API pages -->

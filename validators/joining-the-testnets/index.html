@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709073345129">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709124545366">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -30,12 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.3.0.709073345129" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.3.0.709124545366" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.709124545366" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.709073345129" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.709124545366" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.709124545366" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -201,7 +201,7 @@
     </h2>
 </doc-anchor-target>
 <p>Below is the list of Rebus testnets and their current status. You will need to know the version tag for installation of the <code v-pre>rebusd</code> binary.</p>
-<p>For details of upgrades on the current testnet, as well as syncing, you can <a href="https://github.com/CosmosContracts/testnets">check out the testnets repo, which is the definitive source of truth</a>.</p>
+<p>For details of upgrades on the current testnet, as well as syncing, you can <a href="https://github.com/rebuschain/rebus.testnet">check out the testnets repo, which is the definitive source of truth</a>.</p>
 <p>If you get stuck, then please ask on Discord.</p>
 <div class="table-wrapper scrollbar overflow-hidden">
 <table class="comfortable">
@@ -215,9 +215,9 @@
 </thead>
 <tbody>
 <tr>
-<td>uni-2</td>
-<td>v4.0.0-beta</td>
-<td style="text-align: center;">Testing ground for wasm contracts.</td>
+<td>reb_3333-1</td>
+<td>v1.0.0</td>
+<td style="text-align: center;">Testing Rebus platform.</td>
 <td>current</td>
 </tr>
 </tbody>
@@ -240,8 +240,8 @@
 </thead>
 <tbody>
 <tr>
-<td>uni-2</td>
-<td><ul><li>16GB RAM</li><li>200GB of disk space</li><li>2 Cores (modern CPU&#x27;s)</li></ul></td>
+<td>reb_3333-1</td>
+<td><ul><li>16GB RAM</li><li>200GB of disk space</li><li>at least 2 cores cpu</li></ul></td>
 </tr>
 </tbody>
 </table>
@@ -306,7 +306,7 @@
 <pre class="language-bash"><code v-pre class="language-bash">CHAIN_ID=&lt;chain-id&gt;
 
 #Example
-CHAIN_ID=uni-2</code></pre>
+CHAIN_ID=reb_3333-1</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="set-your-moniker-name">
     <h3>
@@ -319,7 +319,7 @@ CHAIN_ID=uni-2</code></pre>
 <pre class="language-bash"><code v-pre class="language-bash">MONIKER_NAME=&lt;moniker-name&gt;
 
 #Example
-MONIKER_NAME=&quot;Validatron 9000&quot;</code></pre>
+MONIKER_NAME=&quot;ValidatorT1000&quot;</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="set-persistent-peers">
     <h3>
@@ -327,11 +327,11 @@ MONIKER_NAME=&quot;Validatron 9000&quot;</code></pre>
         <span><strong>Set persistent peers</strong></span>
     </h3>
 </doc-anchor-target>
-<p>Persistent peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the chosen testnet:</p>
+<p>Active and running peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the Rebus testnet:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">#Set the base repo URL for the testnet &amp; retrieve peers
-CHAIN_REPO=&quot;https://raw.githubusercontent.com/CosmosContracts/testnets/main/$CHAIN_ID&quot; &amp;&amp; \
-export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/persistent_peers.txt&quot;)&quot;
+CHAIN_REPO=&quot;https://raw.githubusercontent.com/rebuschain/rebus.testnet/master&quot; &amp;&amp; \
+export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/seeds.txt&quot;)&quot;
 
 # check it worked
 echo $PEERS</code></pre>
@@ -349,7 +349,7 @@ echo $PEERS</code></pre>
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in <code v-pre>~/.rebus/config/config.toml</code> instead.</p>
+<p>NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in <code v-pre>~/.rebusd/config/config.toml</code> instead.</p>
         </div>
     </div>
 </div>
@@ -359,10 +359,10 @@ echo $PEERS</code></pre>
         <span>Set minimum gas prices</span>
     </h3>
 </doc-anchor-target>
-<p>In <code v-pre>$HOME/.rebus/config/app.toml</code>, set gas prices:</p>
+<p>In <code v-pre>$HOME/.rebus/config/app.toml</code>, set gas minimum prices:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none"># note testnet denom
-sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.0025urebusx\&quot;/&quot; ~/.rebus/config/app.toml</code></pre>
+sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.0008arebus\&quot;/&quot; ~/.rebus/config/app.toml</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="setting-up-the-node">
     <h2>
@@ -397,7 +397,7 @@ sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.002
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">rebusd init $MONIKER_NAME --chain-id $CHAIN_ID</code></pre>
 </doc-codeblock></div>
-<p>This will generate the following files in <code v-pre>~/.rebus/config/</code></p>
+<p>This will generate the following files in <code v-pre>~/.rebusd/config/</code></p>
 <ul>
 <li><code v-pre>genesis.json</code></li>
 <li><code v-pre>node_key.json</code></li>
@@ -427,7 +427,7 @@ sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.002
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">curl https://raw.githubusercontent.com/CosmosContracts/testnets/main/$CHAIN_ID/genesis.json &gt; ~/.rebus/config/genesis.json</code></pre>
+<pre class="language-none"><code v-pre class="language-none">curl https://raw.githubusercontent.com/rebuschain/rebus.testnet/master/genesis.json &gt; ~/.rebusd/config/genesis.json</code></pre>
 </doc-codeblock></div>
 <p>This will replace the genesis file created using <code v-pre>rebusd init</code> command with the genesis file for the testnet. ****</p>
 <doc-anchor-target id="set-persistent-peers-1">
@@ -448,7 +448,7 @@ sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.002
 </doc-anchor-target>
 <p>Create a new key pair for your validator:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">rebusd keys add &lt;key-name&gt;
+<pre class="language-bash"><code v-pre class="language-bash">rebusd keys add &lt;key-name&gt; --coin-type 118 --algo secp256k1
 
 # Query the keystore for your public address
 rebusd keys show &lt;key-name&gt; -a</code></pre>
@@ -456,8 +456,9 @@ rebusd keys show &lt;key-name&gt; -a</code></pre>
 <p>Replace <code v-pre>&lt;key-name&gt;</code> with a key name of your choosing.</p>
 <p>If you already have a key from a previous testnet, you can recover it using the mnemonic:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">rebusd keys add &lt;key-name&gt; --recover</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">rebusd keys add &lt;key-name&gt; --recover  --coin-type 118 --algo secp256k1</code></pre>
 </doc-codeblock></div>
+<p>The key is Keplr and Keplr+Ledger wallet compatible. (type=118 algo=secp256k1)</p>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-red-500"></div>
     <div class="flex w-full py-4 border border-l-0 border-gray-300 rounded-tr rounded-br doc-alert bg-white dark:bg-dark-700 dark:border-dark-700" role="alert">
@@ -527,7 +528,7 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up</code></pr
 <p>To upgrade the node to a validator, you will need to submit a <code v-pre>create-validator</code> transaction:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">rebusd tx staking create-validator \
-  --amount 9000000urebusx \
+  --amount 9000000arebus \
   --commission-max-change-rate &quot;0.1&quot; \
   --commission-max-rate &quot;0.20&quot; \
   --commission-rate &quot;0.1&quot; \
@@ -536,7 +537,7 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up</code></pr
   --pubkey=$(rebusd tendermint show-validator) \
   --moniker $MONIKER_NAME \
   --chain-id $CHAIN_ID \
-  --gas-prices 0.025urebusx \
+  --gas-prices 0.0025arebus \
   --from &lt;key-name&gt;</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="backup-critical-files">

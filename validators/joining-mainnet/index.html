@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709073345129">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.3.0.709124545366">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.3.0">
@@ -30,12 +30,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.3.0.709073345129" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.3.0.709124545366" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.3.0.709124545366" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.3.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.709073345129" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.709073345129" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.3.0.709124545366" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.3.0.709124545366" defer></script>
 </head>
 <body>
     <div id="docs-app" class="relative text-base antialiased text-gray-700 bg-white font-body dark:bg-dark-850 dark:text-dark-300">
@@ -237,8 +237,8 @@
 </thead>
 <tbody>
 <tr>
-<td>rebus-1</td>
-<td>This is the first chain-id from the genesis event.</td>
+<td>reb_1111-1</td>
+<td>This is the first chain-id from the genesis.</td>
 <td style="text-align: center;">current</td>
 <td>0</td>
 <td>N/A</td>
@@ -263,7 +263,7 @@
 </thead>
 <tbody>
 <tr>
-<td>rebus-1</td>
+<td>reb_1111-1</td>
 <td><ul><li>4 Cores (modern CPU&#x27;s)</li><li>32GB RAM</li><li>1TB of storage (SSD or NVME)</li></ul></td>
 </tr>
 </tbody>
@@ -344,11 +344,11 @@
 <pre class="language-bash"><code v-pre class="language-bash">CHAIN_ID=&lt;chain-id&gt;
 
 # Example
-CHAIN_ID=rebus-1</code></pre>
+CHAIN_ID=reb_1111-1</code></pre>
 </doc-codeblock></div>
 <p>You can also set this in your <code v-pre>.profile</code> file:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">export CHAIN_ID=rebus-1</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">export CHAIN_ID=reb_1111-1</code></pre>
 </doc-codeblock></div>
 <p>Then source it:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
@@ -365,19 +365,22 @@ CHAIN_ID=rebus-1</code></pre>
 <pre class="language-bash"><code v-pre class="language-bash">MONIKER_NAME=&lt;moniker-name&gt;
 
 # Example
-MONIKER_NAME=&quot;Validatron 9000&quot;</code></pre>
+MONIKER_NAME=&quot;ValidatorT1000&quot;</code></pre>
 </doc-codeblock></div>
-<doc-anchor-target id="set-persistent-peers">
+<doc-anchor-target id="setting-the--peers">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#set-persistent-peers">#</doc-anchor-trigger>
-        <span><strong>Set persistent peers</strong></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setting-the--peers">#</doc-anchor-trigger>
+        <span><strong>Setting the  peers</strong></span>
     </h3>
 </doc-anchor-target>
-<p>Persistent peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the chosen mainnet:</p>
+<p>Active and running peers will be required to tell your node where to connect to other nodes and join the network. To retrieve the peers for the chosen mainnet:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash"># Set the base repo URL for mainnet &amp; retrieve peers
-CHAIN_REPO=&quot;https://raw.githubusercontent.com/CosmosContracts/mainnet/main/$CHAIN_ID&quot; &amp;&amp; \
-export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/persistent_peers.txt&quot;)&quot;</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">#Set the base repo URL for the testnet &amp; retrieve peers
+CHAIN_REPO=&quot;https://raw.githubusercontent.com/rebuschain/rebus.mainnet/master&quot; &amp;&amp; \
+export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/seeds.txt&quot;)&quot;
+
+# check it worked
+echo $PEERS</code></pre>
 </doc-codeblock></div>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
@@ -404,7 +407,7 @@ export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/persistent_peers.txt&quot;)&quot;
 </doc-anchor-target>
 <p>In <code v-pre>$HOME/.rebus/config/app.toml</code>, set minimum gas prices:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.0025urebus,0.001ibc\/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\&quot;/&quot; ~/.rebus/config/app.toml</code></pre>
+<pre class="language-none"><code v-pre class="language-none">sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.0008arebus\&quot;/&quot; ~/.rebus/config/app.toml</code></pre>
 </doc-codeblock></div>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
@@ -439,7 +442,7 @@ export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/persistent_peers.txt&quot;)&quot;
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">rebusd init $MONIKER_NAME --chain-id $CHAIN_ID</code></pre>
 </doc-codeblock></div>
-<p>This will generate the following files in <code v-pre>~/.rebus/config/</code></p>
+<p>This will generate the following files in <code v-pre>~/.rebusd/config/</code></p>
 <ul>
 <li><code v-pre>genesis.json</code></li>
 <li><code v-pre>node_key.json</code></li>
@@ -452,18 +455,18 @@ export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/persistent_peers.txt&quot;)&quot;
     </h3>
 </doc-anchor-target>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">curl https://raw.githubusercontent.com/CosmosContracts/mainnet/main/$CHAIN_ID/genesis.json &gt; ~/.rebus/config/genesis.json</code></pre>
+<pre class="language-none"><code v-pre class="language-none">curl https://raw.githubusercontent.com/rebuschain/rebus.mainnet/master/genesis.json &gt; ~/.rebusd/config/genesis.json</code></pre>
 </doc-codeblock></div>
 <p>This will replace the genesis file created using <code v-pre>rebusd init</code> command with the mainnet <code v-pre>genesis.json</code>. ****</p>
-<doc-anchor-target id="set-persistent-peers-1">
+<doc-anchor-target id="setting-the-peers">
     <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#set-persistent-peers-1">#</doc-anchor-trigger>
-        <span><strong>Set persistent peers</strong></span>
+        <doc-anchor-trigger class="header-anchor-trigger" to="#setting-the-peers">#</doc-anchor-trigger>
+        <span><strong>Setting the peers</strong></span>
     </h3>
 </doc-anchor-target>
-<p>Using the peers variable we set earlier, we can set the <code v-pre>persistent_peers</code> in <code v-pre>~/.rebus/config/config.toml</code>:</p>
+<p>Using the peers variable we set earlier, we can set the <code v-pre>seeds</code> in <code v-pre>~/.rebusd/config/config.toml</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sed -i.bak -e &quot;s/^persistent_peers *=.*/persistent_peers = \&quot;$PEERS\&quot;/&quot; ~/.rebus/config/config.toml</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">sed -i.bak -e &quot;s/^seeds *=.*/seeds = \&quot;$PEERS\&quot;/&quot; ~/.rebusd/config/config.toml</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="create-or-restore-a-local-key-pair">
     <h3>
@@ -474,11 +477,11 @@ export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/persistent_peers.txt&quot;)&quot;
 <p>Either create a new key pair, or restore an existing wallet for your validator:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash"># Create new keypair
-rebusd keys add &lt;key-name&gt;
+rebusd keys add &lt;key-name&gt; --coin-type 118 --algo secp256k1
 
 # Restore existing rebus wallet with mnemonic seed phrase.
 # You will be prompted to enter mnemonic seed.
-rebusd keys add &lt;key-name&gt; --recover
+rebusd keys add &lt;key-name&gt; --recover --coin-type 118 --algo secp256k1
 
 # Query the keystore for your public address
 rebusd keys show &lt;key-name&gt; -a</code></pre>
@@ -507,7 +510,7 @@ rebusd keys show &lt;key-name&gt; -a</code></pre>
     </h3>
 </doc-anchor-target>
 <p>You will require some Rebus tokens to bond to your validator. To be in the active set you will need to have enough tokens to be in the top 125 validators by delegation weight.</p>
-<p>If you do not have any Rebus tokens for you validator you can purchase tokens on Osmosis or Emeris.</p>
+<p>If you do not have any Rebus tokens for you validator you can purchase tokens <a href="https://www.rebuschain.com/where">here</a>.</p>
 <doc-anchor-target id="setup-cosmovisor">
     <h2>
         <doc-anchor-trigger class="header-anchor-trigger" to="#setup-cosmovisor">#</doc-anchor-trigger>
@@ -569,7 +572,7 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up</code></pr
 <p>To upgrade the node to a validator, you will need to submit a <code v-pre>create-validator</code> transaction:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">rebusd tx staking create-validator \
-  --amount 9000000urebus \
+  --amount 9000000arebus \
   --commission-max-change-rate &quot;0.1&quot; \
   --commission-max-rate &quot;0.20&quot; \
   --commission-rate &quot;0.1&quot; \
@@ -578,7 +581,7 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up</code></pr
   --pubkey=$(rebusd tendermint show-validator) \
   --moniker $MONIKER_NAME \
   --chain-id $CHAIN_ID \
-  --gas-prices 0.025urebus \
+  --gas-prices 0.0025arebus \
   --from &lt;key-name&gt;</code></pre>
 </doc-codeblock></div>
 <div class="flex mb-6">
@@ -613,37 +616,6 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up</code></pr
 <li><code v-pre>node_key.json</code></li>
 </ul>
 <p>It is recommended that you encrypt the backup of these files.</p>
-<doc-anchor-target id="syncing-after-lupercalia">
-    <h2>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#syncing-after-lupercalia">#</doc-anchor-trigger>
-        <span>Syncing After Lupercalia</span>
-    </h2>
-</doc-anchor-target>
-<p>🏗🚧 Under construction​ 🏗🚧</p>
-<doc-anchor-target id="syncing-from-a-backup">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#syncing-from-a-backup">#</doc-anchor-trigger>
-        <span>Syncing from a backup</span>
-    </h3>
-</doc-anchor-target>
-<p>After creating your validator private key, you will want to sync using a backup to after the Lupercalia chain restart, and the security patch that followed. You can do this using a snapshot.</p>
-<p>The example instructions here should work, although the heights of the snapshots will change. You can check out instructions and current versions from Pokachu <a href="https://polkachu.com/tendermint_snapshots/rebus">here</a>.</p>
-<div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">wget -O rebus_2616376.tar.lz4 https://snapshots2.polkachu.com/snapshots/rebus/rebus_2616376.tar.lz4
-rebusd unsafe-reset-all
-lz4 -c -d rebus_2616376.tar.lz4  | tar -x -C ~/.rebus
-sudo systemctl start cosmovisor
-rm rebus_2616376.tar.lz4
-sudo journalctl -u cosmovisor -f</code></pre>
-</doc-codeblock></div>
-<p>Make sure that you back up your validator&#x27;s private key before doing <code v-pre>rebusd unsafe-reset-all</code>.</p>
-<doc-anchor-target id="full-sync-without-a-backup">
-    <h3>
-        <doc-anchor-trigger class="header-anchor-trigger" to="#full-sync-without-a-backup">#</doc-anchor-trigger>
-        <span>Full sync without a backup</span>
-    </h3>
-</doc-anchor-target>
-<p>To do a full sync without a backup, and avoid trusting a single backup provider, you can sync from the Lupercalia genesis. The best guide out there has been provided by <a href="https://gist.github.com/webmaster128/af65a1d499bf246e08dac99d445dd26a">Simon from Confio</a>.</p>
 
                                 
                                 <!-- Required only on API pages -->
