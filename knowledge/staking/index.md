@@ -12,7 +12,7 @@ Staking is the process of locking up a digital asset non custodially (REBUS in t
 
 ⚪️ **Earn rewards -** By staking to a validator, you are contributing to the security of the network and are rewarded with **REBUS** through staking rewards.
 
-⚪️ **Vote for the future -** Staking **REBUS** grants the wallet owner the right to vote on governance proposals and contribute to making decisions on the future and direction of the network.
+⚪️ **Vote for the Community and Ethical -** Staking **REBUS** grants the wallet owner the right to vote on governance proposals for the Community fund pool and the Ethical fund pool.
 
 ### ✅ **Staking rewards**
 
@@ -25,7 +25,7 @@ Staking rewards are distributed to staked **REBUS** in two ways:
 1. **Transaction fees** - transaction fees collected on the Rebus Chain are distributed to staked REBUS.
 2. **Newly distributed REBUS -** New REBUS created through the network inflation is distributed to REBUS stakers each block over the first 15 years of the Rebus Chain operation.
 
-Learn more about the reward Schedule: [Incentive Structure](/rebus/economic-overview/incentive-structure)
+Learn more about the reward Schedule: [Block reard schedule](/rebus/economic-overview/block-reward-schedule)
 
 ### ⚪️ **Staking safely**
 

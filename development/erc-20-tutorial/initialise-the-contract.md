@@ -1,2 +1,0 @@
-# Initialise the Contract
-

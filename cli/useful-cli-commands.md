@@ -47,10 +47,16 @@ See keys on the current box:
 rebusd keys list
 ```
 
-Import a key from a mnemonic:
+Import a key from a mnemonic (Comsos/Keplr or Keplr+Ledger):
 
 ```bash
-rebusd keys add <new-key-name> --recover
+rebusd keys add <new-key-name> --recover --coin-type 118 --algo secp256k1 
+```
+
+Import a key from a mnemonic (Metamask or Metamask+Ledger):
+
+```bash
+rebusd keys add <new-key-name> --recover --coin-type 60 --algo eth_secp256k1 
 ```
 
 Export a private key (warning: don't do this unless you know what you're doing!)
@@ -58,6 +64,32 @@ Export a private key (warning: don't do this unless you know what you're doing!)
 ```bash
 rebusd keys export <your-key-name> --unsafe --unarmored-hex
 ```
+
+
+Convert address from Bench32 to HEX (example):
+
+```bash
+rebusd debug addr rebus1dl90xa89ljj29mna8uasdxs3nejdw46x8767tc
+
+Address bytes: [111 202 243 116 229 252 164 162 238 125 63 59 6 154 17 158 100 215 87 70]
+Address (hex): 6FCAF374E5FCA4A2EE7D3F3B069A119E64D75746
+Address (EIP-55): 0x6fCAf374E5fCa4a2ee7D3F3B069A119e64D75746
+Bech32 Acc: rebus1dl90xa89ljj29mna8uasdxs3nejdw46x8767tc
+Bech32 Val: rebusvaloper1dl90xa89ljj29mna8uasdxs3nejdw46xefxp7m
+```
+
+Convert address from HEX to Bench32 (example):
+
+```bash
+rebusd debug addr 6FCAF374E5FCA4A2EE7D3F3B069A119E64D75746
+
+Address bytes: [111 202 243 116 229 252 164 162 238 125 63 59 6 154 17 158 100 215 87 70]
+Address (hex): 6FCAF374E5FCA4A2EE7D3F3B069A119E64D75746
+Address (EIP-55): 0x6fCAf374E5fCa4a2ee7D3F3B069A119e64D75746
+Bech32 Acc: rebus1dl90xa89ljj29mna8uasdxs3nejdw46x8767tc
+Bech32 Val: rebusvaloper1dl90xa89ljj29mna8uasdxs3nejdw46xefxp7m
+```
+
 
 Withdraw rewards (including validator commission), where `rebusvaloper1...` is the validator address:
 

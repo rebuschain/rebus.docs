@@ -1,2 +1,0 @@
-# Query and run commands
-

@@ -3,7 +3,7 @@
 REBUS, the native coin of the Rebus chain and carries a variety of use cases within the ecosystem, including:
 
 * **securing the proof of stake network,**
-* **key to on-chain governance,**
+* **on-chain governance,** for the Community fund pool and the Ethical fund pool.
 * used to **pay for all the transactions, services and fees** from all the dapps hosted on the Rebus chain.
 
 ## **Token Economics (Tokenomics)**

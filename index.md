@@ -5,37 +5,19 @@ icon: home
 
 # Introduction
 
-## **Origin Story**
-
-Rebus originates & evolves from a **community driven initiative**, prompted by dozens of developers, validators & delegators in the Cosmos ecosystem. The shared vision is to **preserve the neutrality, performance & reliability** of the Cosmos Hub and offload smart contract deployment to a dedicated sister Hub.
-
-Some of the founding principles centre around:
-
-⚪️ Inception of the **worlds first permission-less, designated interoperable smart contract network.**
-
-⚪️ Pioneering **CosmWasm development** **and adoption**.
-
-⚪️ Eliminating common smart contract **L1 bottlenecks** (poor scalability, non-interoperability, high fees, concentrated governance control).
-
-⚪️ **Sister Hub to the Cosmos Hub** - Preserving the neutrality of the Hub by offloading smart contract usage/congestion to a designated contract zone.
-
-⚪️ **Governance by ATOM stakers which become REBUS stakers**. Stakedrop where 47% of the genesis supply goes to ATOM stakers on a 1:1 basis.
-
-⚪️ **Eliminating potential legal limitations** (Rebus has not/will not conduct any form of seed sale, private sale or public sale. All $REBUS entered circulation via the decentralized network launch on October 1st 2021)
 
 ## **What is Rebus?**
 
-Rebus is an open source platform for **interoperable smart contracts** which automatically executes, controls or documents a procedure of relevant events and actions according to the terms of such contract or agreement to be valid & usable across multiple sovereign networks.
+Rebus is a platform built to host blockchain applications (EVM) and native Vaults usable across multiple sovereign networks.
 
 ### **Why Rebus?**
 
-Rebus as a **sovereign public blockchain** in the Cosmos ecosystem, aims to provide an environment for the deployment of interoperable smart contracts. The network serves as a **decentralized, permissionless & censorship resistant** avenue for developers to efficiently and securely launch smart contracts using proven frameworks and compile them in various languages **Rust & Go.**
+Rebus as a **sovereign public blockchain** in the Cosmos ecosystem, aims to provide an environment for the deployment of interoperable smart contracts. The network serves as a **decentralized, permissionless & censorship resistant** avenue for developers to efficiently and securely launch smart contracts using standard framworks. 
 
-Battle tested contract modules such as **CosmWasm**, allow for **decentralized applications** (dapps) to be compiled on robust and secure multi-chain smart contracts. Additional specialized modules may be introduced at any time via on-chain governance.
 
-### **Inter Blockchain Communication (IBC)**
+### **Inter Blockchain Communication (IBC) and Interchain Account (ICA)**
 
-At the heart of Cosmos ecosystem is the Inter Blockchain Communication Protocol (IBC), which sets the table for an interoperable base layer 0 to now be used to transfer data packets across thousands of independent networks supporting IBC. Naturally, the next evolutionary milestone is to enable cross-network smart contracts. This enables Rebus smart contracts to interoperate with all IBC enabled networks.
+At the heart of Cosmos ecosystem is the Inter Blockchain Communication Protocol (IBC) and then the Interchain Account (ICA), which sets the table for an interoperable base layer 0 to now be used to transfer data packets across thousands of independent networks supporting IBC/ICA. This enables Rebus smart contracts and Rebus Vaults to interoperate with all IBC enabled networks.
 
 ### **Cosmos SDK**
 
@@ -47,6 +29,6 @@ Agreement on the network is reached via **Tendermint BFT consensus**.
 
 Tendermint BFT is a solution that packages the networking and consensus layers of a blockchain into a generic engine, allowing developers to focus on application development as opposed to the complex underlying protocol. As a result, Tendermint saves hundreds of hours of development time.
 
-### **CosmWasm**
+### **EVM**
 
-Rebus is the neutral [home of CosmWasm](rebus/home-of-cosmwasm.md) smart contracts and the InterWasm DAO. The Rebus Network ecosystem is pioneering CosmWasm development and adoption.
+Rebus is built on top of Ethermint and bring with it the EVM/Ethereum compatibility.
