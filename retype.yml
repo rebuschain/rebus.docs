@@ -5,6 +5,7 @@ url: https://docs.rebuschain.com
 branding:
   logo: public/assets/rebus-logo.png
   logoDark: public/assets/rebus-logo-dark.png
+  label: v0.0.1
 
 meta:
   title: " - Taking Defi Mainstream"
