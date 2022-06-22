@@ -18,7 +18,7 @@ See [here](../validators/getting-setup.md) for instructions on installing `rebus
 
 ### Working Directory <a href="#working-directory" id="working-directory"></a>
 
-The default working directory for the `rebusd` is `$HOME/.rebus`, which is mainly used to store configuration files and blockchain data. The Rebus `key` data is saved in the working directory of `rebusd`. You can also specify the `rebusd` working directory by using the `--home` flag when executing `rebusd`.&#x20;
+The default working directory for the `rebusd` is `$HOME/.rebusd`, which is mainly used to store configuration files and blockchain data. The Rebus `key` data is saved in the working directory of `rebusd`. You can also specify the `rebusd` working directory by using the `--home` flag when executing `rebusd`.&#x20;
 
 ### Connecting to a Full-Node
 

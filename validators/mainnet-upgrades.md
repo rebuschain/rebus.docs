@@ -8,9 +8,6 @@ icon: /public/assets/upgrade.png
 
 # Mainnet Upgrades
 
-{% hint style="info" %}
-Release procedures for validators and node operators are explained [here](https://github.com/rebuschain/rebus.core/blob/main/RELEASES.md). The `RELEASES.md` file in Rebus's GitHub repo is the canonical source of truth for release processes.
-{% endhint %}
 
 The Rebus Network mainnet is regularly upgraded to provide the latest security patches, Cosmos SDK module integrations and performance improvements.
 

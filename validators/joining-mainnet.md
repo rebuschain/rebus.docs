@@ -10,9 +10,6 @@ icon: /public/assets/join.png
 
 The correct version of the binary for mainnet at genesis is `v1.0.0`. Its release page can be found [here](https://github.com/rebuschain/rebus.core/releases/tag/v1.0.0).
 
-{% hint style="danger" %}
-Note that because of the Lupercalia upgrade, you will need to sync a node from after the Lupercalia upgrade block, 2578099. To sync to this version, follow the guide in 'Syncing after Lupercalia'.
-{% endhint %}
 
 ## Mainnet chain-id
 
@@ -175,7 +172,7 @@ After creating a new key, the key information and seed phrase will be shown. It 
 
 You will require some Rebus tokens to bond to your validator. To be in the active set you will need to have enough tokens to be in the top 125 validators by delegation weight.
 
-If you do not have any Rebus tokens for you validator you can purchase tokens [here](https://www.rebuschain.com/where).
+If you do not have any Rebus tokens for you validator you can purchase tokens [here](https://www.rebuschain.com/).
 
 ## Setup cosmovisor
 
