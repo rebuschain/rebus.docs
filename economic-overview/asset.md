@@ -4,7 +4,7 @@ icon: /public/assets/rebus-icon.png
 
 # Native Asset (REBUS)
 
-REBUS, the native coin of the Rebus chain and carries a variety of use cases within the ecosystem, including:
+REBUS, the native coin of the Rebus chain which carries a variety of use cases within the ecosystem, including:
 
 * **securing the proof of stake network,**
 * **on-chain governance,** for the Community fund pool and the Ethical fund pool.
@@ -12,4 +12,4 @@ REBUS, the native coin of the Rebus chain and carries a variety of use cases wit
 
 ## **Token Economics (Tokenomics)**
 
-Please refer to your website [Token economics](https://www.rebuschain.com/platform/token-economics).
+Please refer to our website [Token economics](https://www.rebuschain.com/platform/token-economics).
