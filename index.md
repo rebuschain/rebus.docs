@@ -12,12 +12,12 @@ Rebus is a platform built to host blockchain applications (EVM) and native Vault
 
 ### **Why Rebus?**
 
-Rebus as a **sovereign public blockchain** in the Cosmos ecosystem, aims to provide an environment for the deployment of interoperable smart contracts. The network serves as a **decentralized, permissionless & censorship resistant** avenue for developers to efficiently and securely launch smart contracts using standard framworks. 
+Rebus as a **sovereign public blockchain** in the Cosmos ecosystem, aiming to provide an environment for the deployment of interoperable smart contracts. The network serves as a **decentralized, permissionless & censorship resistant** avenue for developers to efficiently and securely launch smart contracts using standard framworks. 
 
 
 ### **Inter Blockchain Communication (IBC) and Interchain Account (ICA)**
 
-At the heart of Cosmos ecosystem is the Inter Blockchain Communication Protocol (IBC) and then the Interchain Account (ICA), which sets the table for an interoperable base layer 0 to now be used to transfer data packets across thousands of independent networks supporting IBC/ICA. This enables Rebus smart contracts and Rebus Vaults to interoperate with all IBC enabled networks.
+At the heart of the Cosmos ecosystem is the Inter Blockchain Communication Protocol (IBC) and then the Interchain Account (ICA), which sets the table for an interoperable base layer 0 to now be used to transfer data packets across thousands of independent networks supporting IBC/ICA. This enables Rebus smart contracts and Rebus Vaults to interoperate with all IBC enabled networks.
 
 ### **Cosmos SDK**
 
