@@ -12,7 +12,7 @@ Rebus is a platform built to host blockchain applications (EVM) and native Vault
 
 ### **Why Rebus?**
 
-Rebus as a **sovereign public blockchain** in the Cosmos ecosystem, aiming to provide an environment for the deployment of interoperable smart contracts. The network serves as a **decentralized, permissionless & censorship resistant** avenue for developers to efficiently and securely launch smart contracts using standard framworks. 
+Rebus is a **sovereign public blockchain** in the Cosmos ecosystem, aiming to provide an environment for the deployment of interoperable smart contracts. The network serves as a **decentralized, permissionless & censorship resistant** avenue for developers to efficiently and securely launch smart contracts using standard framworks. 
 
 
 ### **Inter Blockchain Communication (IBC) and Interchain Account (ICA)**
