@@ -23,7 +23,7 @@ When the staking (delegation) transaction is complete, rewards will start to be 
 Staking rewards are distributed to staked **REBUS** in two ways:
 
 1. **Transaction fees** - transaction fees collected on the Rebus Chain are distributed to staked REBUS.
-2. **Newly distributed REBUS -** New REBUS created through the network inflation is distributed to REBUS stakers each block over the first 15 years of the Rebus Chain operation.
+2. **Newly distributed REBUS -** New REBUS created through the network inflation is distributed to REBUS stakers with each subsequent block over the first 15 years of  Rebus Chains operation.
 
 Learn more about the reward Schedule: [Block reard schedule](/rebus/economic-overview/block-reward-schedule)
 
@@ -48,7 +48,7 @@ Some points to consider when selecting a validator:
 
 ### Decentralization of the network
 
-There are a limited number of validators in the active set for the network. Each validator will vote on consensus for each proposed block. The more tokens a validator has staked to them increases the power of the validators vote. It is therefore important that no one validator gains too much voting power over the network, and thus becoming centralized. To help with decentralization of voting power, you may consider delegating to validators lower on the list of total delegation.
+There are a limited number of validators in the active set for the network. Each validator will vote on consensus for each proposed block. The more tokens a validator has staked to them increases the power of the validators vote. It is therefore important that no one validator gains too much voting power over the network, to avoid centralization. To help with decentralization of voting power, you may consider delegating to validators lower on the list of total delegation.
 
 ### Reputation of the validator
 
@@ -56,7 +56,7 @@ Each validator is responsible to provide as much information as possible to pote
 
 You may want to investigate validators you are planning on delegating to. Most validators will provide some extra information such as a bio and website that will be available by clicking on the validator's name in the [https://mintscan.io/rebus](https://mintscan.io/rebus) blockchain explorer interface.
 
-Some validators run telegram, discord, or twitter channels where you can directly contact the operators and receive updates so that you are informed about the validators operations and maintenance activities.
+Some validators run Telegram, Discord, or Twitter channels where you can directly contact the operators and receive updates so that you are informed about the validators operations and maintenance activities.
 
 Many validator operators have representation in the official Rebus Discord and Telegrams channels.
 
@@ -64,17 +64,17 @@ You may want to ask about particular validators in the Rebus Discord channels an
 
 ### Reachability of the validator
 
-Apart from some validators running a telegram, discord etc. consider how reachable a validator is. For instance when you want to know certain specifics mentioned in this chapter or an active governance proposal, his or her validator setup (hardware used or security measures taken etc.). Try getting in touch with the validators you like to stake to.
+Apart from some validators running a telegram, discord etc. consider how reachable a validator is. For instance, when you want to know certain specifics mentioned in this chapter or an active governance proposal, his or her validator setup (hardware used or security measures taken etc.). Try getting in touch with the validators you like to stake to.
 
 ### The Validator setup
 
-When you delegate to a validator nobody wants that validator to be compromised in some way in order to prevent any form of slashing. A validator can take many precautions to mitigate this. For example: they can make a difference by upholding a good hardware standard for their validator, implementing a sentry, setting up good monitoring and alerting infrastructure and making sure they have appropriate security configuration.
+When you delegate to a validator nobody wants that validator to be compromised in some way in order to prevent any form of slashing. A validator can take many precautions to mitigate this. For example: they can make a difference by upholding good hardware standards for their validator, implementing a sentry, setting up good monitoring and alerting infrastructure and making sure they have appropriate security configuration.
 
 ### Project and Community involvement
 
-Anyone can start a validator if technically capable. A difference apart from the technical aspects can be made by their involvement in the project and the community. Some are very actively trying to help the community in many different ways. Helping the community will help provide an excellent end user experience to Rebus network users and will in turn help the Rebus network grow. This in turn will help drive adoption of the Rebus network.
+Anyone can become a validator if technically capable. A difference apart from the technical aspects can be made by their involvement in the project and the community. Some are actively trying to help the community in many different ways. Helping the community will help provide an excellent end user experience to Rebus network users and will in turn help the Rebus network grow. Ultimatelly, this help drive adoption of the Rebus network.
 
-Validators that are involved with the project means that they are up-to-date on the progress of the project, what is happening and they can use that knowledge to help educate the community and the rest of the world.
+Validators that are involved with the project means that they are up-to-date on the progress of the project, what is happening and how they can use that knowledge to help educate the community and the rest of the world.
 
 Active validators are also more likely to be well informed of network upgrades. If validators were to miss software upgrades, they would be unable to reach consensus with the rest of the network. It is most likely that the validator would end up being jailed and thus slashed for downtime.
 
@@ -91,7 +91,7 @@ Validator commission is a percentage of the REBUS rewards earned that is provide
 
 Each validator has the freedom to set their own commission rates. Validators have the power to alter their commission rates as they desire within the range each validator sets when they create their validator.
 
-When considering the amount of commission are willing to pay, you may consider that some validators will provide the bare minimum infrastructure to run a validator while others will run enterprise grade hardware and security which comes with higher operating costs. Sometimes a higher commission rate may represent the higher costs for some operators to provide a higher level of service. However, this may not always be the case.
+When considering the amount of commission you are willing to pay, you may consider that some validators will provide the bare minimum infrastructure to run a validator while others will run enterprise grade hardware and security which comes with higher operating costs. Sometimes a higher commission rate may represent the higher costs for some operators to provide a higher level of service. However, this may not always be the case.
 
 ### Slashing history and validator uptime
 
