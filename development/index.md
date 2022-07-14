@@ -6,7 +6,7 @@ label: Development
 
 # Getting started
 
-The development on the Rebus platform is possible using the EVM/Smart contracts and building Web3 application interacting with the Rebus Vaults. 
+Development on the Rebus platform is possible using the EVM/Smart contracts and building Web3 applications interacting with the Rebus Vaults. 
 
 
 To get up-and-running, the steps are:
