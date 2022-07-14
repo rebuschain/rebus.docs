@@ -44,7 +44,7 @@ Click **Approve** to continue.
 
 ## Select a validator and stake your Rebus tokens
 
-To see all the available validators, click the **All Validators** tab is it's not already selected. A list of active validators will be shown, to see more validators you can click the pagination arrows at the bottom of the page. To delegate tokens to your desired validator, click the **DELEGATE** button to the right hand side of the row for the validator you wish to delegate too. You can also delegate from the My Token header section of the page. 
+To see all the available validators, click the **All Validators** tab if it's not already selected. A list of active validators will be shown. To see more validators you can click the pagination arrows at the bottom of the page. To delegate tokens to your desired validator, click the **DELEGATE** button to the right hand side of the row for the validator you wish to delegate too. You can also delegate from the My Token header section of the page. 
 
 A form will appear, showing the validator and a field to enter the amount of tokens to delegate. Your available tokens can be seen at the bottom of the form. Enter the amount of tokens you wish to delegate and click  **DELEGATE**.
 
@@ -64,7 +64,7 @@ Your tokens are now delegated to the selected validator. You can now see the del
 
 ## Redelegate tokens
 
-If you want to move your tokens to a different validator you can use the redelegate buttons. Once you click on them a popup will show up asking you the from and to validator and the amount you would like to redelegate
+If you want to move your tokens to a different validator you can use the redelegate buttons. Once you click on them a popup will show up asking you the from and to validator and the amount you would like to redelegate.
 
 ![](<../../public/assets/rebus-redelegate.png>)
 
@@ -72,13 +72,13 @@ Click on the **Redelegate** button and approve the transaction in Keplr as you d
 
 ![](<../../public/assets/rebus-redelegate-success.png>)
 
-After redelegating your tokens you should now see two validator listed
+After redelegating your tokens you should now see two validator listed.
 
 ![](<../../public/assets/rebus-redelegate-result.png>)
 
 ## Undelegate tokens
 
-If you want to remove your tokens from a validator you can use the undelegate buttons. Once you click on them a popup will show up asking you the validator and the amount you would like to undelegate
+If you want to remove your tokens from a validator you can use the undelegate buttons. Once you click on them a popup will show up asking you which validator and the amount you would like to undelegate.
 
 ![](<../../public/assets/rebus-undelegate.png>)
 
@@ -86,7 +86,7 @@ Click on the **Undelegate** button and approve the transaction in Keplr as you d
 
 ![](<../../public/assets/rebus-undelegate-success.png>)
 
-After undelegating your tokens you should now see one validator listed
+After undelegating your tokens you should now see one validator listed.
 
 ![](<../../public/assets/rebus-undelegate-result.png>)
 
