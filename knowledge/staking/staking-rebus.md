@@ -27,7 +27,7 @@ Delegation of your tokens to a validator will make them unusable for any other p
 
 ## Open the Rebus Staking UI and log in with Keplr browser extension
 
-Open the Chrome browser and navigate to [https://app.rebustestnet.com/staking](https://app.rebustestnet.com/staking). You will see the following page:
+Open the Chrome browser and navigate to the Rebus webapp (TBA). You will see the following page:
 ![](<../../public/assets/rebus-staking-landing.png>)
 
 {% hint style="info" %}

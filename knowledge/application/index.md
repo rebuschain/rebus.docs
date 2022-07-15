@@ -6,7 +6,7 @@ tags: [knowledge]
 
 # Rebus UI Application
 
-The Rebus UI Application is available for [testnet](https://app.rebustestnet.com) and [mainnet](/knowledge/application/).
+The Rebus UI Application is available for [testnet](/knowledge/application/) and [mainnet](/knowledge/application/).
 
 The application will allow the user to interact with different parts of the Rebus Chain. The functionality is explained in detail for each of the sections:
 
