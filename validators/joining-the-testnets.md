@@ -161,7 +161,7 @@ After creating a new key, the key information and seed phrase will be shown. It 
 
 ### **Get some testnet tokens**
 
-Testnet tokens can be requested from the `#faucet` channel on [Discord](https://discord.gg/HnHKpzd3Db).
+Testnet tokens can be requested from the `#faucet` channel on [Discord](https://discord.gg/tqfSntHxvv).
 
 To request tokens type `$request <your-public-address>` in the message field and press enter.
 
