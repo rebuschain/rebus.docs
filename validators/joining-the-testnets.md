@@ -87,11 +87,11 @@ NB: If you are unsure about this, you can ask in discord for the current peers a
 
 ### Set minimum gas prices
 
-In `$HOME/.rebus/config/app.toml`, set gas minimum prices:
+In `$HOME/.rebusd/config/app.toml`, set gas minimum prices:
 
 ```
 # note testnet denom
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0008arebus\"/" ~/.rebus/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0008arebus\"/" ~/.rebusd/config/app.toml
 ```
 
 ## Setting up the Node
@@ -128,10 +128,10 @@ This will replace the genesis file created using `rebusd init` command with the 
 
 ### **Set persistent peers**
 
-Using the peers variable we[ set earlier](joining-the-testnets.md#set-persistent-peers), we can set the `persistent_peers` in `~/.rebus/config/config.toml`:
+Using the peers variable we[ set earlier](joining-the-testnets.md#set-persistent-peers), we can set the `persistent_peers` in `~/.rebusd/config/config.toml`:
 
 ```bash
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.rebus/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.rebusd/config/config.toml
 ```
 
 ### **Create a local key pair**
@@ -205,7 +205,7 @@ rebusd tx staking create-validator \
 
 ## Backup critical files
 
-There are certain files that you need to backup to be able to restore your validator if, for some reason, it damaged or lost in some way. Please make a secure backup of the following files located in `~/.rebus/config/`:
+There are certain files that you need to backup to be able to restore your validator if, for some reason, it damaged or lost in some way. Please make a secure backup of the following files located in `~/.rebusd/config/`:
 
 * `priv_validator_key.json`
 * `node_key.json`
