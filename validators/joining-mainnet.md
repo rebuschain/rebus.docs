@@ -99,15 +99,15 @@ export PEERS="$(curl -s "$CHAIN_REPO/seeds.txt")"
 echo $PEERS
 ```
 {% hint style="info" %}
-NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.rebus/config/config.toml` instead.
+NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.rebusd/config/config.toml` instead.
 {% endhint %}
 
 ### Set minimum gas prices
 
-In `$HOME/.rebus/config/app.toml`, set minimum gas prices:
+In `$HOME/.rebusd/config/app.toml`, set minimum gas prices:
 
 ```
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0008arebus\"/" ~/.rebus/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0008arebus\"/" ~/.rebusd/config/app.toml
 ```
 
 {% hint style="info" %}
@@ -227,7 +227,7 @@ rebusd tx staking create-validator --help
 
 ## Backup critical files
 
-There are certain files that you need to backup to be able to restore your validator if, for some reason, it damaged or lost in some way. Please make a secure backup of the following files located in `~/.rebus/config/`:
+There are certain files that you need to backup to be able to restore your validator if, for some reason, it damaged or lost in some way. Please make a secure backup of the following files located in `~/.rebusd/config/`:
 
 * `priv_validator_key.json`
 * `node_key.json`

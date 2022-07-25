@@ -60,7 +60,7 @@ export PEERS="$(curl -s "$CHAIN_REPO/persistent_peers.txt")"
 ```
 
 {% hint style="info" %}
-NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.rebus/config/config.toml` instead.
+NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in `~/.rebusd/config/config.toml` instead.
 {% endhint %}
 
 ## Setting up the Node
@@ -73,7 +73,7 @@ These instructions will direct you on how to initialize your node, synchronize t
 rebusd init "$MONIKER_NAME" --chain-id $CHAIN_ID
 ```
 
-This will generate the following files in `~/.rebus/config/`
+This will generate the following files in `~/.rebusd/config/`
 
 * `genesis.json`
 * `node_key.json`
@@ -85,7 +85,7 @@ Download the the "Phoenix" geneis file. The following instructions download the 
 
 ```
 # Download genesis.json file
-curl https://share.blockpane.com/rebus/phoenix/genesis.json > ~/.rebus/config/genesis.json
+curl https://share.blockpane.com/rebus/phoenix/genesis.json > ~/.rebusd/config/genesis.json
 ```
 
 This will replace the genesis file created using `rebusd init` command with the mainnet `genesis.json`.&#x20;
@@ -94,20 +94,20 @@ Alternate directions to download the genesis from IPFS are provided by Simon fro
 
 ### **Set persistent peers**
 
-Using the peers variable we set earlier, we can set the `persistent_peers` in `~/.rebus/config/config.toml`:
+Using the peers variable we set earlier, we can set the `persistent_peers` in `~/.rebusd/config/config.toml`:
 
 ```bash
-sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.rebus/config/config.toml
+sed -i.bak -e "s/^persistent_peers *=.*/persistent_peers = \"$PEERS\"/" ~/.rebusd/config/config.toml
 ```
 
 ### Set minimum gas prices
 
 For RPC nodes and Validator nodes we recommend setting the following `minimum-gas-prices`. As we are a permissionless chain, this setting will help protect against contract spam and potential contract attack vectors.
 
-In `$HOME/.rebus/config/app.toml`, set minimum gas prices:
+In `$HOME/.rebusd/config/app.toml`, set minimum gas prices:
 
 ```
-sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025urebus,0.001ibc\/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\"/" ~/.rebus/config/app.toml
+sed -i.bak -e "s/^minimum-gas-prices *=.*/minimum-gas-prices = \"0.0025urebus,0.001ibc\/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\"/" ~/.rebusd/config/app.toml
 ```
 
 {% hint style="info" %}
