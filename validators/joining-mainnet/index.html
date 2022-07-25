@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.711850001590">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712069790904">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.711850001590" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.712069790904" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.711850001590" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.712069790904" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.711850001590" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.711850001590" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.712069790904" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.712069790904" defer></script>
 
     <link href="/public/rebus.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/public/assets/rebus-icon.png">
@@ -453,7 +453,7 @@ echo $PEERS</code></pre>
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in <code v-pre>~/.rebus/config/config.toml</code> instead.</p>
+<p>NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in <code v-pre>~/.rebusd/config/config.toml</code> instead.</p>
         </div>
     </div>
 </div>
@@ -463,9 +463,9 @@ echo $PEERS</code></pre>
         <span>Set minimum gas prices</span>
     </h3>
 </doc-anchor-target>
-<p>In <code v-pre>$HOME/.rebus/config/app.toml</code>, set minimum gas prices:</p>
+<p>In <code v-pre>$HOME/.rebusd/config/app.toml</code>, set minimum gas prices:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.0008arebus\&quot;/&quot; ~/.rebus/config/app.toml</code></pre>
+<pre class="language-none"><code v-pre class="language-none">sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.0008arebus\&quot;/&quot; ~/.rebusd/config/app.toml</code></pre>
 </doc-codeblock></div>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
@@ -668,7 +668,7 @@ curl http://localhost:26657/status | jq .result.sync_info.catching_up</code></pr
         <span>Backup critical files</span>
     </h2>
 </doc-anchor-target>
-<p>There are certain files that you need to backup to be able to restore your validator if, for some reason, it damaged or lost in some way. Please make a secure backup of the following files located in <code v-pre>~/.rebus/config/</code>:</p>
+<p>There are certain files that you need to backup to be able to restore your validator if, for some reason, it damaged or lost in some way. Please make a secure backup of the following files located in <code v-pre>~/.rebusd/config/</code>:</p>
 <ul>
 <li><code v-pre>priv_validator_key.json</code></li>
 <li><code v-pre>node_key.json</code></li>

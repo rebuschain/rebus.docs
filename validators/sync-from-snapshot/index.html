@@ -6,7 +6,7 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.711850001590">
+    <meta name="turbo-cache-control" content="no-cache" data-turbo-track="reload" data-track-token="2.4.0.712069790904">
 
     <!-- See retype.com -->
     <meta name="generator" content="Retype 2.4.0">
@@ -33,12 +33,12 @@
 
     <script>(function () { var el = document.documentElement, m = localStorage.getItem("doc_theme"), wm = window.matchMedia; if (m === "dark" || (!m && wm && wm("(prefers-color-scheme: dark)").matches)) { el.classList.add("dark") } else { el.classList.remove("dark") } })();</script>
 
-    <link href="../../resources/css/retype.css?v=2.4.0.711850001590" rel="stylesheet" />
+    <link href="../../resources/css/retype.css?v=2.4.0.712069790904" rel="stylesheet" />
 
-    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.711850001590" data-turbo-eval="false" defer></script>
+    <script type="text/javascript" src="../../resources/js/config.js?v=2.4.0.712069790904" data-turbo-eval="false" defer></script>
     <script type="text/javascript" src="../../resources/js/retype.js?v=2.4.0" data-turbo-eval="false" defer></script>
-    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.711850001590" data-turbo-eval="false" defer></script>
-    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.711850001590" defer></script>
+    <script id="lunr-js" type="text/javascript" src="../../resources/js/lunr.js?v=2.4.0.712069790904" data-turbo-eval="false" defer></script>
+    <script id="prism-js" type="text/javascript" src="../../resources/js/prism.js?v=2.4.0.712069790904" defer></script>
 
     <link href="/public/rebus.css" rel="stylesheet" />
     <link rel="icon" type="image/x-icon" href="/public/assets/rebus-icon.png">
@@ -357,7 +357,7 @@ export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/persistent_peers.txt&quot;)&quot;
             </svg>
         </div>
         <div class="pr-5 ml-3 w-full">
-<p>NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in <code v-pre>~/.rebus/config/config.toml</code> instead.</p>
+<p>NB: If you are unsure about this, you can ask in discord for the current peers and explicitly set them in <code v-pre>~/.rebusd/config/config.toml</code> instead.</p>
         </div>
     </div>
 </div>
@@ -377,7 +377,7 @@ export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/persistent_peers.txt&quot;)&quot;
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-bash"><code v-pre class="language-bash">rebusd init &quot;$MONIKER_NAME&quot; --chain-id $CHAIN_ID</code></pre>
 </doc-codeblock></div>
-<p>This will generate the following files in <code v-pre>~/.rebus/config/</code></p>
+<p>This will generate the following files in <code v-pre>~/.rebusd/config/</code></p>
 <ul>
 <li><code v-pre>genesis.json</code></li>
 <li><code v-pre>node_key.json</code></li>
@@ -392,7 +392,7 @@ export PEERS=&quot;$(curl -s &quot;$CHAIN_REPO/persistent_peers.txt&quot;)&quot;
 <p>Download the the &quot;Phoenix&quot; geneis file. The following instructions download the genesis file hosted by blockpane. </p>
 <div class="codeblock-wrapper"><doc-codeblock>
 <pre class="language-none"><code v-pre class="language-none"># Download genesis.json file
-curl https://share.blockpane.com/rebus/phoenix/genesis.json &gt; ~/.rebus/config/genesis.json</code></pre>
+curl https://share.blockpane.com/rebus/phoenix/genesis.json &gt; ~/.rebusd/config/genesis.json</code></pre>
 </doc-codeblock></div>
 <p>This will replace the genesis file created using <code v-pre>rebusd init</code> command with the mainnet <code v-pre>genesis.json</code>. </p>
 <p>Alternate directions to download the genesis from IPFS are provided by Simon from Confio <a href="https://gist.github.com/webmaster128/af65a1d499bf246e08dac99d445dd26a">here</a>.</p>
@@ -402,9 +402,9 @@ curl https://share.blockpane.com/rebus/phoenix/genesis.json &gt; ~/.rebus/config
         <span><strong>Set persistent peers</strong></span>
     </h3>
 </doc-anchor-target>
-<p>Using the peers variable we set earlier, we can set the <code v-pre>persistent_peers</code> in <code v-pre>~/.rebus/config/config.toml</code>:</p>
+<p>Using the peers variable we set earlier, we can set the <code v-pre>persistent_peers</code> in <code v-pre>~/.rebusd/config/config.toml</code>:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-bash"><code v-pre class="language-bash">sed -i.bak -e &quot;s/^persistent_peers *=.*/persistent_peers = \&quot;$PEERS\&quot;/&quot; ~/.rebus/config/config.toml</code></pre>
+<pre class="language-bash"><code v-pre class="language-bash">sed -i.bak -e &quot;s/^persistent_peers *=.*/persistent_peers = \&quot;$PEERS\&quot;/&quot; ~/.rebusd/config/config.toml</code></pre>
 </doc-codeblock></div>
 <doc-anchor-target id="set-minimum-gas-prices">
     <h3>
@@ -413,9 +413,9 @@ curl https://share.blockpane.com/rebus/phoenix/genesis.json &gt; ~/.rebus/config
     </h3>
 </doc-anchor-target>
 <p>For RPC nodes and Validator nodes we recommend setting the following <code v-pre>minimum-gas-prices</code>. As we are a permissionless chain, this setting will help protect against contract spam and potential contract attack vectors.</p>
-<p>In <code v-pre>$HOME/.rebus/config/app.toml</code>, set minimum gas prices:</p>
+<p>In <code v-pre>$HOME/.rebusd/config/app.toml</code>, set minimum gas prices:</p>
 <div class="codeblock-wrapper"><doc-codeblock>
-<pre class="language-none"><code v-pre class="language-none">sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.0025urebus,0.001ibc\/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\&quot;/&quot; ~/.rebus/config/app.toml</code></pre>
+<pre class="language-none"><code v-pre class="language-none">sed -i.bak -e &quot;s/^minimum-gas-prices *=.*/minimum-gas-prices = \&quot;0.0025urebus,0.001ibc\/C4CFF46FD6DE35CA4CF4CE031E643C8FDC9BA4B99AE598E9B0ED98FE3A2319F9\&quot;/&quot; ~/.rebusd/config/app.toml</code></pre>
 </doc-codeblock></div>
 <div class="flex mb-6">
     <div class="shrink-0 w-1 rounded-tl rounded-bl bg-blue-500 dark:bg-blue-400"></div>
