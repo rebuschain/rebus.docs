@@ -10,5 +10,5 @@ icon: /public/assets/share.png
 * [Docs](https://docs.rebuschain.com/)
 * [Github](https://github.com/rebuschain)
 * [Discord](https://discord.com/invite/rebuschain)
-* [Telegram](https://t.me/RebusToken)
+* [Telegram](https://t.me/RebusChain)
 * [Twitter](https://twitter.com/RebusChain)
