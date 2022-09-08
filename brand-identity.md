@@ -6,11 +6,11 @@ icon: /public/assets/rebus-r-black.svg
 
 **Assets**
 
-![Logo Black SVG](../public/assets/rebus-logo-black.png)
+![Logo Black PNG](../public/assets/rebus-logo-black.png)
 
-![Logo White SVG](../public/assets/rebus-logo-white.png)
+![Logo White PNG](../public/assets/rebus-logo-white.png)
 
-![Icon SVG](../public/assets/rebus-icon.png)
+![Icon PNG](../public/assets/rebus-icon.png)
 
 {% file src="../public/assets/rebus-logo-white.svg" %}
 
