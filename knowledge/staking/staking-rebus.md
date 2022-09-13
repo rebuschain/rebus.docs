@@ -22,7 +22,7 @@ For users with a Rebus stakedrop allocation, you will need to add your rebus wal
 {% endhint %}
 
 {% hint style="warning" %}
-Delegation of your tokens to a validator will make them unusable for any other purpose. The tokens become "bonded". To "unbond" your tokens, you will need to un-delegate them. #TODO veifty that this process takes **28 days**. During this unbonding time you **will NOT receive rewards**.
+Delegation of your tokens to a validator will make them unusable for any other purpose. The tokens become "bonded". To "unbond" your tokens, you will need to un-delegate them. #TODO veifty that this process takes **14 days**. During this unbonding time you **will NOT receive rewards**.
 {% endhint %}
 
 ## Open the Rebus Staking UI and log in with Keplr browser extension

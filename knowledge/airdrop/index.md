@@ -1,5 +1,5 @@
 ---
-description: Rebus Airdrop for Osmosis and Atom
+description: Rebus Airdrop for Evmos, Osmosis, Atom and WAX
 icon: gift
 ---
 
