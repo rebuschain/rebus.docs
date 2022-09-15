@@ -4,7 +4,7 @@ icon: book
 tags: [knowledge]
 ---
 
-# Help with wallet set ups
+# Wallets Troubleshooting
 
 This section is to help users that might have issues setting up their wallet to connect to the Rebus chain.
 
@@ -42,3 +42,27 @@ If you are an ATOM, OSMOS or WAX user select the first wallet Keplr Wallet or if
 If you are an EVMOS Keplr user select the second button Keplr Wallet (EVMOS)
 
 If you are a Evmos Metamask user please select the third Metamask button.
+
+## Metamask is not adding the network
+
+If the connect wallet with Metamask doesn't work do the following:
+
+Open your metamask wallet and click `Add Network`
+
+![](<../../public/assets/rebus-metamask-1.png>)
+
+Fill out the following info:
+
+**Nework name:** Rebus
+
+**New RPC URL:** https://api.rebuschain.com:8545
+
+**Chain id:** 1111
+
+**Currency Symbol:** REBUS
+
+![](<../../public/assets/rebus-metamask-3.png>)
+
+At this point you wallet should show the Rebus chain
+
+![](<../../public/assets/rebus-metamask-4.png>)
