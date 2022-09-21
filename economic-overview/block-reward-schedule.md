@@ -8,27 +8,27 @@ label: Rebus Block Rewards
 ### Rebus block reward schedule
 
 {% hint style="info" %}
-The coins reserved for the block reward are: 585,000,000 . The coins are released with a decreasing inflation for the next 15 years after the genesis:
+The coins reserved for the block reward are: 635,708,034 . The coins are released with a decreasing inflation for the next 15 years after the genesis:
 {% endhint %}
 
 | Year | Percentage |  Coins Released |
 | :--- | :--- | :--- |
-| 1 | 25.00% | 160,143,600 |
-| 2 | 15.00% | 96,086,160 |
-| 3 | 10.00% | 64,057,440 |
-| 4 | 10.00% | 64,057,440 |
-| 5 | 5.00% | 32,028,720 |
-| 6 | 5.00% | 32,028,720 |
-| 7 | 5.00% | 32,028,720 |
-| 8 | 5.00% | 32,028,720 |
-| 9 | 5.00% | 32,028,720 |
-| 10 | 5.00% | 32,028,720 |
-| 11 | 2.00% | 12,811,488 |
-| 12 | 2.00% | 12,811,488 |
-| 13 | 2.00% | 12,811,488 |
-| 14 | 2.00% | 12,811,488 |
-| 15 | 2.00% | 12,811,488 |
-| Coins block reward | 100.00% | 640,574,400 |
+| 1 | 25.00% | 158,927,009 |
+| 2 | 15.00% | 95,356,205 |
+| 3 | 10.00% | 63,570,803 |
+| 4 | 10.00% | 63,570,803 |
+| 5 | 5.00% | 31,785,402 |
+| 6 | 5.00% | 31,785,402 |
+| 7 | 5.00% | 31,785,402 |
+| 8 | 5.00% | 31,785,402 |
+| 9 | 5.00% | 31,785,402 |
+| 10 | 5.00% | 31,785,402 |
+| 11 | 2.00% | 12,714,161 |
+| 12 | 2.00% | 12,714,161 |
+| 13 | 2.00% | 12,714,161 |
+| 14 | 2.00% | 12,714,161 |
+| 15 | 2.00% | 12,714,161 |
+| Coins block reward | 100.00% | 635,708,034 |
 
 
 #### The block reward is distributed following these rules:
