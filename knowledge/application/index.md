@@ -28,6 +28,10 @@ The application will allow the user to interact with different parts of the Rebu
 
 [!ref Voting Overview](/knowledge/voting/index.md)
 
+## NFTID Tutorials
+
+[!ref NFTID](/knowledge/application/nftid.md)
+
 ## Tools Tutorials
 
 [!ref Rebus Tools](/knowledge/application/tools.md)
