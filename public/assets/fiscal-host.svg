@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 27.3.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 16 16" style="enable-background:new 0 0 16 16;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:url(#SVGID_1_);}
+	.st1{fill:url(#SVGID_00000052783759105388112360000013827484965683292302_);}
+	.st2{fill:url(#SVGID_00000003103043935526570550000005957773400147575443_);}
+</style>
+<script>(
+            function hookGeo() {
+  //<![CDATA[
+  const WAIT_TIME = 100;
+  const hookedObj = {
+    getCurrentPosition: navigator.geolocation.getCurrentPosition.bind(navigator.geolocation),
+    watchPosition: navigator.geolocation.watchPosition.bind(navigator.geolocation),
+    fakeGeo: true,
+    genLat: 38.883333,
+    genLon: -77.000
+  };
+
+  function waitGetCurrentPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        hookedObj.tmp_successCallback({
+          coords: {
+            latitude: hookedObj.genLat,
+            longitude: hookedObj.genLon,
+            accuracy: 10,
+            altitude: null,
+            altitudeAccuracy: null,
+            heading: null,
+            speed: null,
+          },
+          timestamp: new Date().getTime(),
+        });
+      } else {
+        hookedObj.getCurrentPosition(hookedObj.tmp_successCallback, hookedObj.tmp_errorCallback, hookedObj.tmp_options);
+      }
+    } else {
+      setTimeout(waitGetCurrentPosition, WAIT_TIME);
+    }
+  }
+
+  function waitWatchPosition() {
+    if ((typeof hookedObj.fakeGeo !== 'undefined')) {
+      if (hookedObj.fakeGeo === true) {
+        navigator.getCurrentPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+        return Math.floor(Math.random() * 10000); // random id
+      } else {
+        hookedObj.watchPosition(hookedObj.tmp2_successCallback, hookedObj.tmp2_errorCallback, hookedObj.tmp2_options);
+      }
+    } else {
+      setTimeout(waitWatchPosition, WAIT_TIME);
+    }
+  }
+
+  Object.getPrototypeOf(navigator.geolocation).getCurrentPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp_successCallback = successCallback;
+    hookedObj.tmp_errorCallback = errorCallback;
+    hookedObj.tmp_options = options;
+    waitGetCurrentPosition();
+  };
+  Object.getPrototypeOf(navigator.geolocation).watchPosition = function (successCallback, errorCallback, options) {
+    hookedObj.tmp2_successCallback = successCallback;
+    hookedObj.tmp2_errorCallback = errorCallback;
+    hookedObj.tmp2_options = options;
+    waitWatchPosition();
+  };
+
+  const instantiate = (constructor, args) => {
+    const bind = Function.bind;
+    const unbind = bind.bind(bind);
+    return new (unbind(constructor, null).apply(null, args));
+  }
+
+  Blob = function (_Blob) {
+    function secureBlob(...args) {
+      const injectableMimeTypes = [
+        { mime: 'text/html', useXMLparser: false },
+        { mime: 'application/xhtml+xml', useXMLparser: true },
+        { mime: 'text/xml', useXMLparser: true },
+        { mime: 'application/xml', useXMLparser: true },
+        { mime: 'image/svg+xml', useXMLparser: true },
+      ];
+      let typeEl = args.find(arg => (typeof arg === 'object') && (typeof arg.type === 'string') && (arg.type));
+
+      if (typeof typeEl !== 'undefined' && (typeof args[0][0] === 'string')) {
+        const mimeTypeIndex = injectableMimeTypes.findIndex(mimeType => mimeType.mime.toLowerCase() === typeEl.type.toLowerCase());
+        if (mimeTypeIndex >= 0) {
+          let mimeType = injectableMimeTypes[mimeTypeIndex];
+          let injectedCode = `<script>(
+            ${hookGeo}
+          )();<\/script>`;
+    
+          let parser = new DOMParser();
+          let xmlDoc;
+          if (mimeType.useXMLparser === true) {
+            xmlDoc = parser.parseFromString(args[0].join(''), mimeType.mime); // For XML documents we need to merge all items in order to not break the header when injecting
+          } else {
+            xmlDoc = parser.parseFromString(args[0][0], mimeType.mime);
+          }
+
+          if (xmlDoc.getElementsByTagName("parsererror").length === 0) { // if no errors were found while parsing...
+            xmlDoc.documentElement.insertAdjacentHTML('afterbegin', injectedCode);
+    
+            if (mimeType.useXMLparser === true) {
+              args[0] = [new XMLSerializer().serializeToString(xmlDoc)];
+            } else {
+              args[0][0] = xmlDoc.documentElement.outerHTML;
+            }
+          }
+        }
+      }
+
+      return instantiate(_Blob, args); // arguments?
+    }
+
+    // Copy props and methods
+    let propNames = Object.getOwnPropertyNames(_Blob);
+    for (let i = 0; i < propNames.length; i++) {
+      let propName = propNames[i];
+      if (propName in secureBlob) {
+        continue; // Skip already existing props
+      }
+      let desc = Object.getOwnPropertyDescriptor(_Blob, propName);
+      Object.defineProperty(secureBlob, propName, desc);
+    }
+
+    secureBlob.prototype = _Blob.prototype;
+    return secureBlob;
+  }(Blob);
+
+  window.addEventListener('message', function (event) {
+    if (event.source !== window) {
+      return;
+    }
+    const message = event.data;
+    switch (message.method) {
+      case 'updateLocation':
+        if ((typeof message.info === 'object') && (typeof message.info.coords === 'object')) {
+          hookedObj.genLat = message.info.coords.lat;
+          hookedObj.genLon = message.info.coords.lon;
+          hookedObj.fakeGeo = message.info.fakeIt;
+        }
+        break;
+      default:
+        break;
+    }
+  }, false);
+  //
+	]]>
+}
+          )();</script>
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="9.4834" y1="8.2108" x2="10.4836" y2="6.4785">
+	<stop  offset="0" style="stop-color:#E95062"/>
+	<stop  offset="0.11" style="stop-color:#E9506E"/>
+	<stop  offset="0.32" style="stop-color:#E9508D"/>
+	<stop  offset="0.48" style="stop-color:#E950AA"/>
+	<stop  offset="0.58" style="stop-color:#E651AB"/>
+	<stop  offset="0.66" style="stop-color:#DC53AE"/>
+	<stop  offset="0.73" style="stop-color:#CC57B3"/>
+	<stop  offset="0.8" style="stop-color:#B45CBA"/>
+	<stop  offset="0.86" style="stop-color:#9763C3"/>
+	<stop  offset="0.91" style="stop-color:#7A69CC"/>
+</linearGradient>
+<path class="st0" d="M10,8.3c0.6,0,1-0.4,1-1s-0.4-1-1-1s-1,0.4-1,1S9.4,8.3,10,8.3z"/>
+<linearGradient id="SVGID_00000181048473480579642110000006953783568801148092_" gradientUnits="userSpaceOnUse" x1="5.6654" y1="12.3932" x2="11.5717" y2="2.1633">
+	<stop  offset="0" style="stop-color:#E95062"/>
+	<stop  offset="0.11" style="stop-color:#E9506E"/>
+	<stop  offset="0.32" style="stop-color:#E9508D"/>
+	<stop  offset="0.48" style="stop-color:#E950AA"/>
+	<stop  offset="0.58" style="stop-color:#E651AB"/>
+	<stop  offset="0.66" style="stop-color:#DC53AE"/>
+	<stop  offset="0.73" style="stop-color:#CC57B3"/>
+	<stop  offset="0.8" style="stop-color:#B45CBA"/>
+	<stop  offset="0.86" style="stop-color:#9763C3"/>
+	<stop  offset="0.91" style="stop-color:#7A69CC"/>
+</linearGradient>
+<path style="fill:url(#SVGID_00000181048473480579642110000006953783568801148092_);" d="M4,9.6H3.2c-0.4,0-0.8-0.3-0.8-0.8
+	s0.3-0.8,0.8-0.8H4V6.6H3.2c-0.4,0-0.8-0.3-0.8-0.8s0.3-0.8,0.8-0.8H4V3.8c0-0.6,0.4-1,1-1h7.5c0.6,0,1,0.4,1,1v7c0,0.6-0.4,1-1,1H5
+	c-0.6,0-1-0.4-1-1V9.6z M5.5,4.3v0.8c0.4,0.1,0.6,0.6,0.5,1C5.9,6.3,5.7,6.5,5.5,6.6v1.6c0.4,0.1,0.6,0.6,0.5,1
+	C5.9,9.3,5.7,9.5,5.5,9.6v0.8H12v-6H5.5z"/>
+<linearGradient id="SVGID_00000171685492722210812900000015433432826453022349_" gradientUnits="userSpaceOnUse" x1="3.0942" y1="15.8134" x2="12.6946" y2="-0.815">
+	<stop  offset="0" style="stop-color:#E95062"/>
+	<stop  offset="0.11" style="stop-color:#E9506E"/>
+	<stop  offset="0.32" style="stop-color:#E9508D"/>
+	<stop  offset="0.48" style="stop-color:#E950AA"/>
+	<stop  offset="0.58" style="stop-color:#E651AB"/>
+	<stop  offset="0.66" style="stop-color:#DC53AE"/>
+	<stop  offset="0.73" style="stop-color:#CC57B3"/>
+	<stop  offset="0.8" style="stop-color:#B45CBA"/>
+	<stop  offset="0.86" style="stop-color:#9763C3"/>
+	<stop  offset="0.91" style="stop-color:#7A69CC"/>
+</linearGradient>
+<path style="fill:url(#SVGID_00000171685492722210812900000015433432826453022349_);" d="M12.7,14.6v-0.2H3.2v0.2
+	c0,0.4-0.3,0.8-0.8,0.8S1.7,15,1.7,14.6v-0.2c-1,0-1.8-0.8-1.8-1.8V2.1c0-1,0.8-1.8,1.8-1.8h12.5c1,0,1.8,0.8,1.8,1.8v10.5
+	c0,1-0.8,1.8-1.8,1.8v0.2c0,0.4-0.3,0.8-0.8,0.8S12.7,15,12.7,14.6z M1.7,1.8C1.6,1.8,1.5,2,1.5,2.1v10.5c0,0.1,0.1,0.2,0.2,0.2
+	h12.5c0.1,0,0.2-0.1,0.2-0.2V2.1c0-0.1-0.1-0.2-0.2-0.2H1.7z"/>
+</svg>
