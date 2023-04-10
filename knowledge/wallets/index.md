@@ -12,6 +12,8 @@ tags: [knowledge]
 
 [!ref](metamask-browser-extension.md)
 
+[!ref](trasnfer-funds-cross-wallets.md)
+
 ## Command Line Reference
 
 [!ref](../../cli/modules/keys.md)
