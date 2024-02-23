@@ -145,7 +145,7 @@ After=network-online.target
 
 [Service]
 User=<your-user>
-ExecStart=/home/<your-user>/go/bin/cosmovisor start
+ExecStart=/home/<your-user>/go/bin/cosmovisor run start
 Restart=always
 RestartSec=3
 LimitNOFILE=4096
@@ -190,5 +190,5 @@ sudo systemctl status cosmovisor
 If you need to monitor the service after launch, you can view the logs using:
 
 ```bash
-journalctl -u cosmovisor -f
+sudo journalctl -u cosmovisor -f
 ```
